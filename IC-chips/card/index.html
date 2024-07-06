@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Tags - NFC-F Information</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">NFC-F Information</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../authentication/" class="nav-link">Authentication</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../systems/" class="nav-link">Systems</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">IC chips</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Tags</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Commands</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../commands/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../commands/adhoc/" class="dropdown-item">Ad-hoc</a>
+</li>
+                                    
+<li>
+    <a href="../../commands/authentication/" class="dropdown-item">Authentication</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../systems/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../commands/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#proximity-integrated-circuits" class="nav-link">Proximity Integrated Circuits</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#naming-conventions" class="nav-link">Naming conventions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#sd0" class="nav-link">SD0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#sd1" class="nav-link">SD1</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#sd2" class="nav-link">SD2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#felica-lite" class="nav-link">FeliCa Lite</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#felica-lite-s" class="nav-link">FeliCa Lite-S</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#felica-plreadersug" class="nav-link">FeliCa PlReadersug</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#felica-link" class="nav-link">FeliCa Link</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#mobile-felica" class="nav-link">Mobile FeliCa</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="proximity-integrated-circuits">Proximity Integrated Circuits</h1>
+<table>
+<thead>
+<tr>
+<th>IC</th>
+<th>IC Type (Hex)</th>
+<th>ROM Type (Hex)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#rc-s830">RC-S830</a></td>
+<td><code>00</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#rc-s915">RC-S915</a></td>
+<td><code>01</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#token">RC-S919</a></td>
+<td><code>02</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#version-10">Mobile FeliCa 1.0</a></td>
+<td><code>06</code>-<code>07</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#dual-interface-32kb">RC-S952</a></td>
+<td><code>08</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#dual-interface-16kb">RC-S953</a></td>
+<td><code>09</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Unknown Suica (RC-S9X4)<sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">3</a></sup></td>
+<td><code>0B</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#cjrc-compliant">RC-S954</a></td>
+<td><code>0C</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#high-speed-fram">RC-S960</a></td>
+<td><code>0D</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#version-20">Mobile FeliCa 2.0</a></td>
+<td><code>10</code>-<code>13</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#version-30">Mobile FeliCa 3.0</a></td>
+<td><code>14</code>-<code>15</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#mobile-suica">Mobile Suica</a></td>
+<td><code>16</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#version-40">Mobile FeliCa 4.0</a></td>
+<td><code>17</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#version-41">Mobile FeliCa 4.1</a></td>
+<td><code>18</code>-<code>1F</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#high-speed-fram">RC-S962</a></td>
+<td><code>20</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#jrem-6k">RC-S114</a></td>
+<td><code>31</code>?</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#des-compatible">RC-SA00/1</a></td>
+<td><code>32</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#des-compatible">RC-SA00/2</a></td>
+<td><code>33</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#aes-only">RC-SA01/1</a></td>
+<td><code>34</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#aes-only">RC-SA01/2</a></td>
+<td><code>35</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#cjrc-compliant_1">RC-SA04/1</a></td>
+<td><code>36</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#dual-interface">RC-SA08/1</a></td>
+<td><code>3E</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#cjrc-compliant_2">RC-SA24/1</a></td>
+<td><code>43</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#des-compatible_1">RC-SA20/1</a></td>
+<td><code>44</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#des-compatible_1">RC-SA20/2</a></td>
+<td><code>45</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#aes-only">RC-SA21/2</a></td>
+<td><code>46</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#cjrc-compliant_2">RC-SA24/1x1</a></td>
+<td><code>47</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#aes-only">RC-SA21/2x1</a></td>
+<td><code>48</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#jrem-6k">RC-SA14</a></td>
+<td><code>A2</code>?</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#felica-plug">RC-S926</a></td>
+<td><code>E0</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#felica-link">RC-S967 (Plug Mode)</a></td>
+<td><code>E1</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#felica-lite">RC-S965</a></td>
+<td><code>F0</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#felica-lite-s">RC-S966</a></td>
+<td><code>F1</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#felica-link">RC-S967 (Lite-S Mode)</a></td>
+<td><code>F2</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#felica-link">RC-S967 (NFC-DEP Mode)</a></td>
+<td><code>FF</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="naming-conventions">Naming conventions</h2>
+<p><em>All</em> FeliCa model names across cards, readers, SAMs, are prefixed with <code>RC</code> namespace, <strong>R</strong>emote <strong>C</strong>ard; it is unknown what S would stand for. Each convention noted below may have exceptions, grandfathered in or otherwise.</p>
+<ul>
+<li>RC-S1??<ul>
+<li>Standard (SD) card (PICC) end-products</li>
+<li>RC-S1?0 is a normal card</li>
+<li>RC-S1?8 is a token</li>
+<li>RC-S1?9 is a token module</li>
+</ul>
+</li>
+<li>RC-S2??<ul>
+<li>Multi-service reader/writer (PCD) products</li>
+<li>Usually for POS systems</li>
+</ul>
+</li>
+<li>RC-S3??<ul>
+<li>Reader/writer (PCD) products</li>
+</ul>
+</li>
+<li>RC-S4??<ul>
+<li>Reader/writer (PCD) ICs</li>
+</ul>
+</li>
+<li>RC-S5??<ul>
+<li>Secure Access Modules</li>
+</ul>
+</li>
+<li>RC-S6??<ul>
+<li>Embedded reader modules</li>
+</ul>
+</li>
+<li>RC-S7??<ul>
+<li>Antenna modules</li>
+<li>Only seen for Link and Lite-S modules</li>
+</ul>
+</li>
+<li>RC-S8??<ul>
+<li>Legacy card (PICC) ICs</li>
+</ul>
+</li>
+<li>RC-S9??<ul>
+<li>Legacy card (PICC) products</li>
+<li>RC-S96? is for FeliCa Lite series</li>
+</ul>
+</li>
+<li>RC-SA??<ul>
+<li>A for AES</li>
+<li>RC-SA0? is SD1</li>
+<li>RC-SA2? is SD2</li>
+<li>RC-SA?0 allows DES backwards compatiblity</li>
+<li>RC-SA?1 only allows AES encryption</li>
+<li>RC-SA?8 is dual-interface</li>
+</ul>
+</li>
+<li>RC-S??4<ul>
+<li>CJRC-compliant card ICs/products</li>
+</ul>
+</li>
+</ul>
+<h3 id="product-forms">Product forms</h3>
+<table>
+<thead>
+<tr>
+<th>Form name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Bare die w/ bump on sawn wafer</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Bare die w/ bump in tray</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Bare die w/o bump on sawn wafer</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Bare die w/o bump in tray</td>
+</tr>
+<tr>
+<td>E?</td>
+<td>Bare die w bump on reel?</td>
+</tr>
+<tr>
+<td>F?</td>
+<td>Bare die w/o bump on reel?</td>
+</tr>
+<tr>
+<td>G?</td>
+<td>Bare die w bump on reel?</td>
+</tr>
+<tr>
+<td>H?</td>
+<td>Bare die w/o bump on reel?</td>
+</tr>
+<tr>
+<td>S</td>
+<td>Bare die w bump on unsawn wafer</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Bare die w/o bump on unsawn wafer</td>
+</tr>
+<tr>
+<td>U?</td>
+<td>Plastic-packaged chip w bump (BGA)?</td>
+</tr>
+<tr>
+<td>V</td>
+<td>Plastic-packaged chip w/o bump (outline)?</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sd0">SD0<sup id="fnref:sd0"><a class="footnote-ref" href="#fn:sd0">1</a></sup></h2>
+<h3 id="rc-s830">RC-S830</h3>
+<p>Unlisted IC module, though referenced by NfcPy. Apparently used by ez-link in Singapore as an early adopter. Does not support some commands like Request System Code or Search Service Code.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">4</a></sup></p>
+<ul>
+<li>Model name: RC-S830 (likely just the name of a PICC?)<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">3</a></sup></li>
+<li>IC type: <code>00</code></li>
+<li>Known PICCs:<ul>
+<li>RC-S831<sup id="fnref4:3"><a class="footnote-ref" href="#fn:3">5</a></sup></li>
+<li>RC-S833<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">6</a></sup></li>
+</ul>
+</li>
+<li>Hardware core: 8-bit RISC CPU (potentially Fujitsu F<sup>2</sup>MC-8FX or Panasonic AM)</li>
+<li>1.5KB EEPROM</li>
+</ul>
+<h3 id="rc-s850">RC-S850</h3>
+<p>Unlisted IC module.</p>
+<ul>
+<li>Model name: Unknown, likely RC-S915 with different software?</li>
+<li>Known PICCs:<ul>
+<li>RC-S850<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">5</a></sup><ul>
+<li>With anti-collision</li>
+</ul>
+</li>
+<li>RC-S853<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">7</a></sup><ul>
+<li>CJRC IC Card standard compliant</li>
+<li>With anti-collision</li>
+<li>With leuco-dye ticket rewrite function</li>
+<li>One cutout bumps in the physical card shape</li>
+</ul>
+</li>
+<li>RC-S854<ul>
+<li>CJRC IC Card standard compliant</li>
+<li>With anti-collision</li>
+<li>Two cutout bumps in the physical card shape</li>
+</ul>
+</li>
+<li>RC-S855<sup id="fnref3:3"><a class="footnote-ref" href="#fn:3">5</a></sup><ul>
+<li>With anti-collision</li>
+<li>With leuco-dye ticket rewrite function</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Hardware core: 8-bit RISC CPU (potentially Fujitsu F<sup>2</sup>MC-8FX or Panasonic AM)</li>
+<li>4KB EEPROM</li>
+</ul>
+<h3 id="rc-s915">RC-S915</h3>
+<ul>
+<li>Model name: RC-S915<sup id="fnref12:6"><a class="footnote-ref" href="#fn:6">8</a></sup></li>
+<li>IC type: <code>01</code></li>
+<li>Known antenna modules:<ul>
+<li>RC-S934F</li>
+<li>RC-S935F</li>
+<li>RC-S936<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">9</a></sup><ul>
+<li>Token module</li>
+<li>2KB EEPROM</li>
+<li>Does not implement some commands found in RC-S938</li>
+</ul>
+</li>
+<li>RC-S938<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">10</a></sup><ul>
+<li>Token module</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Known PICCs:<ul>
+<li>RC-S860<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">5</a></sup></li>
+<li>RC-S862<ul>
+<li>Similar to RC-S860</li>
+<li>With JIS II single-track magnetic stripe</li>
+</ul>
+</li>
+<li>RC-S863</li>
+<li>RC-S864<ul>
+<li>CJRC-compliant?</li>
+</ul>
+</li>
+<li>RC-S891<sup id="fnref3:9"><a class="footnote-ref" href="#fn:9">11</a></sup></li>
+</ul>
+</li>
+<li>Hardware core: Sony CXD9559<ul>
+<li>8-bit RISC CPU</li>
+<li>Potentially Fujitsu F<sup>2</sup>MC-8FX or Panasonic AM core</li>
+</ul>
+</li>
+<li>4KB EEPROM</li>
+</ul>
+<h3 id="token">Token<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">11</a></sup></h3>
+<ul>
+<li>Model name: RC-S919<sup id="fnref11:6"><a class="footnote-ref" href="#fn:6">8</a></sup></li>
+<li>IC type: <code>02</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">3</a></sup></li>
+<li>Known PICCs:<ul>
+<li>RC-S890</li>
+</ul>
+</li>
+<li>576B EEPROM</li>
+</ul>
+<h3 id="dual-interface-32kb">Dual interface (32KB)<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">12</a></sup></h3>
+<p>IC with physical contacts, potentially for credit/debit cards like Rakuten Edy. Supports both DES and AES encryption, JavaCard applets, ISO/IEC 14443 (NFC-A) and ISO/IEC 7816 (APDU).
+* Model name: RC-S952
+* IC code: <code>08</code><sup id="fnref:6"><a class="footnote-ref" href="#fn:6">8</a></sup>
+* Known PICCs:
+    * RC-S952/3MV
+        <sup id="fnref2:9"><a class="footnote-ref" href="#fn:9">11</a></sup>* GlobalPlatform 2.0.1
+        * JavaCard OS 2.1.1
+        * VSDC 2.4.1
+* 32KB EEPROM
+* Hardware core: Infineon</p>
+<h3 id="dual-interface-16kb">Dual interface (16KB)<sup id="fnref2:10"><a class="footnote-ref" href="#fn:10">12</a></sup></h3>
+<p>IC with physical contacts, potentially for credit/debit cards like Rakuten Edy. Supports both DES and AES encryption, JavaCard applets, ISO/IEC 14443 (NFC-A) and ISO/IEC 7816 (APDU).
+* Model name: RC-S953
+* IC code: <code>09</code><sup id="fnref2:6"><a class="footnote-ref" href="#fn:6">8</a></sup>
+* 16KB EEPROM
+* Hardware core: Infineon</p>
+<h3 id="cjrc-compliant">CJRC-compliant<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">13</a></sup></h3>
+<p>Unlisted IC with physical contacts, potentially for credit/debit cards with additional transport card functionality, such as JR East's View Card with Suica. Model number (ending in 4) indicates compliance with CJRC IC Card standard.
+Supports both DES and AES encryption, JavaCard applets, ISO/IEC 14443 (NFC-A) and ISO/IEC 7816 (APDU).
+* Known model names:
+    * RC-S954
+    * RC-S957/2<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">14</a></sup>
+* IC code: <code>0C</code><sup id="fnref3:6"><a class="footnote-ref" href="#fn:6">8</a></sup>
+* Known PICCs:
+    * RC-S954/2MV
+* FeliCa OS version: Dual OS 1.1
+* GlobalPlatform version: 2.0.1
+* JavaCard OS version: 2.1.1
+* VSDC version: 2.4.1
+* Hardware core: Renesas AE45X1-C (H8SX AE-4)<sup id="fnref:13"><a class="footnote-ref" href="#fn:13">15</a></sup>
+* 36KB EEPROM</p>
+<h3 id="high-speed-fram">High-speed FRAM</h3>
+<p>Introduced double data transfer rate (424kbps)</p>
+<ul>
+<li>Known models:<ul>
+<li>RC-S960<ul>
+<li>IC type: <code>0D</code></li>
+<li>9KB FRAM</li>
+<li>Known antenna modules:<ul>
+<li>RC-S970F</li>
+<li>RC-S979F</li>
+</ul>
+</li>
+<li>Known PICCs:<ul>
+<li>RC-S880<sup id="fnref:14"><a class="footnote-ref" href="#fn:14">16</a></sup></li>
+<li>RC-S889<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">17</a></sup></li>
+</ul>
+</li>
+<li>Hardware core: Fujitsu CXD9861 / MB94RS402 (F<sup>2</sup>MC-8FX)<sup id="fnref:16"><a class="footnote-ref" href="#fn:16">18</a></sup></li>
+<li>ROM type: <code>0F</code></li>
+</ul>
+</li>
+<li>RC-S962<ul>
+<li>IC type: <code>20</code></li>
+<li>4KB FRAM</li>
+<li>Known antenna modules:<ul>
+<li>RC-S893 (token module<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">19</a></sup>)</li>
+<li>RC-S981F</li>
+<li>RC-S975F</li>
+<li>RC-S976F</li>
+</ul>
+</li>
+<li>Known PICCs:<ul>
+<li>RC-S885<sup id="fnref:18"><a class="footnote-ref" href="#fn:18">20</a></sup></li>
+<li>RC-S888<sup id="fnref:19"><a class="footnote-ref" href="#fn:19">21</a></sup></li>
+<li>RC-S892 (token<sup id="fnref:20"><a class="footnote-ref" href="#fn:20">22</a></sup>)</li>
+</ul>
+</li>
+<li>Hardware core: Fujitsu CXD9916H3 / MB94RS403 (F<sup>2</sup>MC-8FX)<sup id="fnref:21"><a class="footnote-ref" href="#fn:21">23</a></sup></li>
+<li>ROM type: <code>01</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>FeliCa OS version: 3.31</li>
+</ul>
+<h2 id="sd1">SD1</h2>
+<p>Introduced AES encryption.</p>
+<h3 id="des-compatible">DES-compatible<sup id="fnref:22"><a class="footnote-ref" href="#fn:22">24</a></sup><sup id="fnref:23"><a class="footnote-ref" href="#fn:23">25</a></sup></h3>
+<p>Supports both DES and AES encryption</p>
+<ul>
+<li>Model name: RC-SA00</li>
+<li>ROM type: <code>03</code></li>
+<li>Known variants:<ul>
+<li>RC-SA00/1x<ul>
+<li>IC type: <code>32</code></li>
+<li>8pF input capacitance</li>
+<li>Known antenna modules:<sup id="fnref10:6"><a class="footnote-ref" href="#fn:6">8</a></sup><ul>
+<li>RC-S109 (token module<sup id="fnref:24"><a class="footnote-ref" href="#fn:24">26</a></sup>)</li>
+<li>RC-S109/1 (token module<sup id="fnref:25"><a class="footnote-ref" href="#fn:25">27</a></sup>)</li>
+<li>RC-S111 (flexible PCB module<sup id="fnref:26"><a class="footnote-ref" href="#fn:26">28</a></sup>)</li>
+<li>RC-S111/1 (flexible PCB module)</li>
+<li>RC-SA02F</li>
+<li>RC-SA03F</li>
+</ul>
+</li>
+<li>Known PICCs:<ul>
+<li>RC-S100<sup id="fnref2:23"><a class="footnote-ref" href="#fn:23">25</a></sup></li>
+<li>RC-S108 (token)</li>
+<li>RC-S108/1 (token)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>RC-SA00/2x<ul>
+<li>IC type: <code>33</code></li>
+<li>50pF input capacitance</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Known forms: A, B, C, D</li>
+<li>Hardware core: Toshiba T6ND8 (ARMv7-M SecurCore SC300?)</li>
+<li>6KB EEPROM</li>
+</ul>
+<h3 id="aes-only">AES-only<sup id="fnref:27"><a class="footnote-ref" href="#fn:27">29</a></sup></h3>
+<ul>
+<li>Model name: RC-SA01</li>
+<li>ROM type: <code>03</code></li>
+<li>Known variants:<ul>
+<li>RC-SA01/1x<ul>
+<li>IC type: <code>34</code></li>
+<li>8pF input capacitance</li>
+</ul>
+</li>
+<li>RC-SA01/2x<ul>
+<li>IC type: <code>35</code></li>
+<li>50pF input capacitance</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Known forms: A, B, C, D, S, T</li>
+<li>Hardware core: Toshiba T6ND8 (ARMv7-M SecurCore SC300?)</li>
+<li>6KB EEPROM</li>
+</ul>
+<h3 id="cjrc-compliant_1">CJRC-compliant<sup id="fnref:28"><a class="footnote-ref" href="#fn:28">30</a></sup></h3>
+<p>Unlisted IC, potentially for transport cards. Model number (ending in 4) indicates compliance with CJRC IC Card standard.
+Supports both DES and AES encryption. PICC model name may be RC-S104.</p>
+<p>This IC chip was observed under an ICOCA card.</p>
+<ul>
+<li>Model name: RC-SA04/1</li>
+<li>IC type: <code>36</code></li>
+<li>ROM type: <code>01</code></li>
+<li>Known forms: A, B, C, D</li>
+<li>8pF input capacitance</li>
+<li>Hardware core: Toshiba T6ND8 (ARMv7-M SecurCore SC300?)</li>
+<li>6KB EEPROM</li>
+<li>One cutout bumps in the physical card shape</li>
+</ul>
+<h3 id="jrem-mn67s150-d">JREM MN67S150-D<sup id="fnref:29"><a class="footnote-ref" href="#fn:29">31</a></sup></h3>
+<p>Appears to support only AES. PICC model name may be RC-S104</p>
+<p>This IC chip was observed under a Suica card.</p>
+<ul>
+<li>IC type: <code>31</code></li>
+<li>ROM type: <code>05</code></li>
+<li>Hardware core: Panasonic MN67S150-D (AM13E)<sup id="fnref:30"><a class="footnote-ref" href="#fn:30">32</a></sup></li>
+<li>FeliCa OS version: 5.0</li>
+</ul>
+<h3 id="dual-interface">Dual Interface<sup id="fnref:31"><a class="footnote-ref" href="#fn:31">33</a></sup></h3>
+<p>Unlisted IC with physical contacts, potentially for credit/debit cards like Rakuten Edy or JR East View Card. Supports both DES and AES encryption, JavaCard applets, ISO/IEC 14443 (NFC-A) and ISO/IEC 7816 (APDU).
+Likely used in conjunction with EMV.</p>
+<ul>
+<li>Known variants:<ul>
+<li>RC-SA08/1<ul>
+<li>IC type: <code>3E</code></li>
+<li>ROM type: <code>03</code></li>
+<li>68pF input capacitance</li>
+</ul>
+</li>
+<li>RC-SA08/2<ul>
+<li>IC type: <code>3E</code></li>
+<li>ROM type: <code>03</code></li>
+<li>20pF input capacitance</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Known antenna modules: None, unreleased?</li>
+<li>Known PICCs: None, unreleased?</li>
+<li>Evaluation level: EAL5+</li>
+<li>Hardware core: STM ST31G480 (ARMv6-M SecurCore SC000)</li>
+<li>FeliCa OS version: 5.0</li>
+</ul>
+<h3 id="jrem-6k">JREM 6K<sup id="fnref:32"><a class="footnote-ref" href="#fn:32">34</a></sup></h3>
+<p>Unlisted IC, likely a precursor to SD2 potentially for transport cards. Model number (ending in 4) indicates compliance with CJRC IC Card standard</p>
+<ul>
+<li>Model number: RC-SJ6K? <sup id="fnref:j6k"><a class="footnote-ref" href="#fn:j6k">2</a></sup> or RC-SA14</li>
+<li>Known PICC: RC-S114<ul>
+<li>This is likely just the model number for the PICC rather than the IC itself (RC-S1xx)</li>
+</ul>
+</li>
+<li>IC type: <code>A2</code>? (derived from FeliCa OS version)</li>
+<li>ROM type: <code>01</code>? (derived from FeliCa OS version)</li>
+<li>FeliCa OS version: 5.0 code <code>A201</code></li>
+<li>Hardware core: Toshiba T6ND8 (ARMv7-M SecurCore SC300?)</li>
+</ul>
+<h2 id="sd2">SD2<sup id="fnref:33"><a class="footnote-ref" href="#fn:33">35</a></sup></h2>
+<p>Released in 2021.</p>
+<p>Introduced:
+* Extended Overlap Services
+* Value Limited Purse Services
+* Integrated FeliCa Lite-S
+* AES-MAC-protected commands
+* Integrated FeliCa Secure ID</p>
+<ul>
+<li>ROM type: <code>01</code></li>
+<li>Hardware core: Fujitsu CXD90056 (F<sup>2</sup>MC-8FX?)</li>
+<li>FeliCa OS version: 5.0 Code DF0D</li>
+<li>Known forms: A, C</li>
+</ul>
+<h3 id="des-compatible_1">DES-compatible</h3>
+<p>Supports both DES and AES encryption</p>
+<ul>
+<li>Model name: RC-SA20</li>
+<li>Known variants:<ul>
+<li>RC-SA20/1x<ul>
+<li>IC type: <code>44</code></li>
+<li>Parasitic input capacitance</li>
+<li>Known antenna modules:<sup id="fnref9:6"><a class="footnote-ref" href="#fn:6">8</a></sup><ul>
+<li>RC-S129/1 (token module)<sup id="fnref:34"><a class="footnote-ref" href="#fn:34">36</a></sup></li>
+<li>RC-S131/1 (flexible PCB module)<sup id="fnref:35"><a class="footnote-ref" href="#fn:35">37</a></sup></li>
+<li>RC-SA22F</li>
+</ul>
+</li>
+<li>Known PICCs:<ul>
+<li>RC-S120<sup id="fnref:36"><a class="footnote-ref" href="#fn:36">38</a></sup></li>
+<li>RC-S128/1 (token)</li>
+<li>RC-S136 (Edy Oshiharai Keyholder<sup id="fnref:37"><a class="footnote-ref" href="#fn:37">39</a></sup><sup id="fnref:38"><a class="footnote-ref" href="#fn:38">40</a></sup>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>RC-SA20/3x<ul>
+<li>IC type: <code>44</code></li>
+<li>Parasitic input capacitance</li>
+</ul>
+</li>
+<li>RC-SA20/2x<ul>
+<li>IC type: <code>45</code></li>
+<li>50pF input capacitance</li>
+</ul>
+</li>
+<li>RC-SA20/4x<ul>
+<li>IC type: <code>45</code></li>
+<li>50pF input capacitance</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>6KB FRAM</li>
+</ul>
+<h3 id="aes-only_1">AES-only</h3>
+<ul>
+<li>Model name: RC-SA21</li>
+<li>Known variants:<ul>
+<li>RC-SA21/2x<ul>
+<li>IC type: <code>46</code></li>
+<li>50pF input capacitance</li>
+<li>4KB FRAM</li>
+</ul>
+</li>
+<li>RC-SA21/2x1<ul>
+<li>IC type: <code>48</code></li>
+<li>50pF input capacitance</li>
+<li>6KB FRAM</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="cjrc-compliant_2">CJRC-compliant</h3>
+<p>Unlisted IC, potentially for transport cards. Model number (ending in 4) indicates compliance with CJRC IC Card standard. PICC model name may be RC-S124
+Supports both DES and AES encryption.</p>
+<ul>
+<li>Model name: RC-SA24</li>
+<li>Known variants:<ul>
+<li>RC-SA24/1x<ul>
+<li>IC type: <code>43</code></li>
+<li>Parasitic input capacitance</li>
+<li>10KB FRAM</li>
+</ul>
+</li>
+<li>RC-SA24/3x<ul>
+<li>IC type: <code>43</code></li>
+<li>Parasitic input capacitance</li>
+<li>10KB FRAM</li>
+</ul>
+</li>
+<li>RC-SA24/1x1<ul>
+<li>IC type: <code>47</code></li>
+<li>Parasitic input capacitance</li>
+<li>6KB FRAM</li>
+</ul>
+</li>
+<li>RC-SA24/3x1<ul>
+<li>IC type: <code>47</code></li>
+<li>Parasitic input capacitance</li>
+<li>6KB FRAM</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="felica-lite">FeliCa Lite<sup id="fnref:39"><a class="footnote-ref" href="#fn:39">41</a></sup></h2>
+<ul>
+<li>Model name: RC-S965</li>
+<li>IC type: <code>F0</code><sup id="fnref8:6"><a class="footnote-ref" href="#fn:6">8</a></sup></li>
+<li>Known antenna modules:<ul>
+<li>RC-S701 (Seal)</li>
+<li>RC-S710 (Compact)</li>
+<li>RC-S978F</li>
+<li>RC-S980F (Roll)</li>
+</ul>
+</li>
+<li>Known PICCs:<ul>
+<li>RC-S886</li>
+<li>RC-S887 (Thin card)</li>
+</ul>
+</li>
+</ul>
+<h2 id="felica-lite-s">FeliCa Lite-S</h2>
+<ul>
+<li>Model name: RC-S966<sup id="fnref7:6"><a class="footnote-ref" href="#fn:6">8</a></sup></li>
+<li>IC type: <code>F1</code></li>
+<li>Known antenna modules:<ul>
+<li>RC-S982</li>
+</ul>
+</li>
+<li>Known modules:<ul>
+<li>RC-S711 (Compact)<sup id="fnref:40"><a class="footnote-ref" href="#fn:40">42</a></sup></li>
+<li>RC-S712</li>
+</ul>
+</li>
+</ul>
+<h2 id="felica-plreadersug">FeliCa PlReadersug<sup id="fnref:41"><a class="footnote-ref" href="#fn:41">43</a></sup></h2>
+<p>Programmable NFC Type 3 compliant Tag</p>
+<ul>
+<li>Model name: RC-S926</li>
+<li>IC type: <code>E0</code><sup id="fnref6:6"><a class="footnote-ref" href="#fn:6">8</a></sup></li>
+<li>Known modules:<ul>
+<li>RC-S801</li>
+<li>RC-S802 (Compact module)</li>
+</ul>
+</li>
+</ul>
+<h2 id="felica-link">FeliCa Link<sup id="fnref:42"><a class="footnote-ref" href="#fn:42">44</a></sup></h2>
+<p>Continuation of FeliCa Plug with Lite-S capabilities interfaced with I2C</p>
+<ul>
+<li>Known variants:<ul>
+<li>RC-S967/1V<ul>
+<li>Without reader/writer capability</li>
+</ul>
+</li>
+<li>RC-S967/2V<ul>
+<li>With reader/writer capability</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Known modules:<ul>
+<li>RC-S730 (NFC module with I2C interface)</li>
+<li>RC-S732 (Compact module)<sup id="fnref:43"><a class="footnote-ref" href="#fn:43">45</a></sup></li>
+</ul>
+</li>
+<li>IC types:<sup id="fnref5:6"><a class="footnote-ref" href="#fn:6">8</a></sup><ul>
+<li>Lite-S / Host Through modes: <code>F2</code></li>
+<li>Plug mode: <code>E1</code></li>
+<li>NFC-DEP mode: <code>FF</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="mobile-felica">Mobile FeliCa</h2>
+<p>A JavaCard applet seperately developed and licensed by FeliCa Networks Inc., a subsidiary of Sony jointly owned by NTT Docomo and JR East.</p>
+<ul>
+<li>Known antenna modules: N/A</li>
+<li>Known PICCs: N/A</li>
+</ul>
+<p>Within the Mobile FeliCa Client Android application, there are references to two implementation types:
+* <code>FelicaSe</code> (Secure Element?)
+* <code>FelicaGp</code> (GlobalPlatform)</p>
+<p>Special thanks to<a href="https://qiita.com/eggman/items/27d988fe5c0be2c38a33">@eggman</a> on Qiita for gathering data on <code>FelicaSe</code> chips.</p>
+<h3 id="version-10">Version 1.0<sup id="fnref:45"><a class="footnote-ref" href="#fn:45">46</a></sup></h3>
+<ul>
+<li>IC type: <code>06</code>-<code>07</code><sup id="fnref4:6"><a class="footnote-ref" href="#fn:6">8</a></sup></li>
+<li>Hardware core: Sony CXD3715GG/GU-x version 2.1<ul>
+<li>8-bit RISC</li>
+<li>Potentially Fujitsu F<sup>2</sup>MC-8FX or Panasonic AM core</li>
+<li>9KB EEPROM</li>
+</ul>
+</li>
+</ul>
+<h3 id="version-20">Version 2.0</h3>
+<ul>
+<li>IC type: <code>10</code>-<code>13</code></li>
+<li>Known hardware cores (variants):<ul>
+<li>Sony CXD3717GG<sup id="fnref:46"><a class="footnote-ref" href="#fn:46">47</a></sup><ul>
+<li>8-bit RISC (?; implied by series from version 1.0)</li>
+<li>Potentially Fujitsu F<sup>2</sup>MC-8FX or Panasonic AM core</li>
+<li>IC type: <code>10</code>?</li>
+</ul>
+</li>
+<li>Renesas HD65256D (AE56D) (H8SX AE-5)<sup id="fnref:47"><a class="footnote-ref" href="#fn:47">48</a></sup><sup id="fnref:48"><a class="footnote-ref" href="#fn:48">49</a></sup><sup id="fnref:49"><a class="footnote-ref" href="#fn:49">50</a></sup><ul>
+<li>IC type: <code>11</code>?</li>
+</ul>
+</li>
+<li>Renesas HD65256D1 (AE56D1) (H8SX AE-5)<sup id="fnref:51"><a class="footnote-ref" href="#fn:51">51</a></sup><ul>
+<li>IC type: <code>12</code>?</li>
+</ul>
+</li>
+<li>Toshiba T6ND4 (ARMv4 SecurCore SC100)<sup id="fnref:52"><a class="footnote-ref" href="#fn:52">52</a></sup><sup id="fnref:53"><a class="footnote-ref" href="#fn:53">53</a></sup><ul>
+<li>IC type: <code>13</code>?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="version-30">Version 3.0</h3>
+<ul>
+<li>IC type: <code>14</code>-<code>15</code></li>
+<li>Known hardware cores (variants):<ul>
+<li>Toshiba T6NE1 (ARMv4 SecurCore SC100)<sup id="fnref:54"><a class="footnote-ref" href="#fn:54">54</a></sup><sup id="fnref:55"><a class="footnote-ref" href="#fn:55">55</a></sup><ul>
+<li>IC type: <code>14</code>?</li>
+<li>Plastic-packaged form factor is T6NE6</li>
+</ul>
+</li>
+<li>Samsung S3CS9AB (ARMv4 SecurCore SC100)<sup id="fnref:56"><a class="footnote-ref" href="#fn:56">56</a></sup><sup id="fnref:57"><a class="footnote-ref" href="#fn:57">57</a></sup><ul>
+<li>IC type: <code>15</code>?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="mobile-suica">Mobile Suica</h3>
+<p>It appears that Suica has unique functionality on Mobile FeliCa devices, though maybe only on Apple devices, as seen by the different IC type observed in <a href="https://qiita.com/treastrain/items/e8dc5084a663f09ff469#apple-pay-%E3%81%AE-suica-%E3%81%8C%E6%8C%81%E3%81%A4-felica-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%B3%E3%83%BC%E3%83%89">this screenshot</a>.</p>
+<p>Also observed on Suica from iPhone 12 Pro, which should have Mobile FeliCa applets.
+* IC type: <code>16</code></p>
+<h3 id="version-40">Version 4.0</h3>
+<ul>
+<li>IC type: <code>17</code></li>
+<li>Hardware core: GlobalPlatform-compliant Secure Element</li>
+</ul>
+<h3 id="version-41">Version 4.1</h3>
+<ul>
+<li>IC type: <code>18</code>-<code>1F</code></li>
+<li>Hardware core: GlobalPlatform-compliant Secure Element</li>
+</ul>
+<hr />
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:sd0">
+<p>Unofficial name for pre-SD1 technology&#160;<a class="footnote-backref" href="#fnref:sd0" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:j6k">
+<p>Derived from report number&#160;<a class="footnote-backref" href="#fnref:j6k" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:1">
+<p>Stephen Tiedemann. Nfcpy/src/nfc/tag/tt3_sony.py at v1.0.4 · nfcpy/nfcpy. March 2022. URL: <a href="https://github.com/nfcpy/nfcpy/blob/v1.0.4/src/nfc/tag/tt3_sony.py">https://github.com/nfcpy/nfcpy/blob/v1.0.4/src/nfc/tag/tt3_sony.py</a> (visited on 2024-06-18).&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Anonymous. ICカード＠北斗BBS. URL: <a href="http://www.hokt.org/bbs/mibbs.cgi?mo=p&amp;fo=free1&amp;tn=0036">http://www.hokt.org/bbs/mibbs.cgi?mo=p&amp;fo=free1&amp;tn=0036</a> (visited on 2024-06-22).&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>ネットワークアプリケーション＆コンテンツサービスセクター FeliCaビジネスセンター FeliCaソリューションサービス事業部. RC-S860. Datasheet FCJ001-02-0302, Sony Corporation, February 2003. URL: <a href="http://www.sony.co.jp/Products/felica/pdf/RC-S860_etc_J.pdf">http://www.sony.co.jp/Products/felica/pdf/RC-S860_etc_J.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:3" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:3" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Sony Corporation. 技術情報. May 2001. URL: <a href="https://web.archive.org/web/20010509093831/http://www.sony.co.jp/Products/felica/contents02b.html">https://web.archive.org/web/20010509093831/http://www.sony.co.jp/Products/felica/contents02b.html</a> (visited on 2024-07-02).&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>B2Bソリューション事業本部 FeliCaデバイス事業部 営業部. RCS-853-854. Datasheet FCJ003-06-0902, Sony Corporation, February 2009. URL: <a href="http://www.sony.co.jp/Products/felica/business/data/RC-S853_854_J.pdf">http://www.sony.co.jp/Products/felica/business/data/RC-S853_854_J.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>Sony Corporation. ソニー株式会社 \textbar  FeliCa \textbar  法人のお客様 \textbar  技術情報 \textbar  技術情報対象製品一覧. URL: <a href="https://www.sony.co.jp/Products/felica/business/tech-support/list.html">https://www.sony.co.jp/Products/felica/business/tech-support/list.html</a> (visited on 2024-06-22).&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:6" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:6" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:6" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:6" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:6" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:6" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:6" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:6" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:6" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:6" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:6" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>マイクロシステムズネットワークカンパニー FeliCaビジネスセンター 営業部. RC-S936. Datasheet FMJ001-04-0509, Sony Corporation, September 2005. URL: <a href="http://www.sony.co.jp:80/Products/felica/pdf/RC-S936_J.pdf">http://www.sony.co.jp:80/Products/felica/pdf/RC-S936_J.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>マイクロシステムズネットワークカンパニー FeliCaビジネスセンター 営業部. RC-S938. Datasheet FMJ002-04-0509, Sony Corporation, September 2005.&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>B2Bソリューション事業本部 FeliCaデバイス事業部 営業部. RC-S890 RC-S891. Datasheet, Sony Corporation, February 2009. URL: <a href="https://www.orangetags.co.jp/datasheet/RC-S890_J.pdf">https://www.orangetags.co.jp/datasheet/RC-S890_J.pdf</a> (visited on 2024-06-22).&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:9" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:9" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>マイクロシステムズネットワークカンパニー FeliCaビジネスセンター 営業部. RC-S952 RC-S953. Datasheet FIJ002-02-0509, Sony Corporation, September 2005. URL: <a href="http://www.sony.co.jp/Products/felica/pdf/data/RC-S952_S953_J.pdf">http://www.sony.co.jp/Products/felica/pdf/data/RC-S952_S953_J.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 12 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:10" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>Sony Corporation. RC-S954/2MV. Datasheet FIJ002-08-0912, Sony Corporation, December 2009. URL: <a href="http://www.sony.co.jp/Products/felica/business/data/RC-S954_J.pdf">http://www.sony.co.jp/Products/felica/business/data/RC-S954_J.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p>Sony Corporation. Security Target RC-S957/2 Series with contact-based operating system out of scope. Technical Report 957-2-STP-E01-10, Nederlands Schema voor Certificatie op het gebied van IT-Beveiliging, June 2009. URL: <a href="https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/957-2-STP-E01-10.pdf">https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/957-2-STP-E01-10.pdf</a> (visited on 2024-07-02).&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:13">
+<p>Renesas Technology Corporation. AE45X1-C (HD65145X1) Version 02 Smartcard Security Target. Technical Report AE45X1C-CC-ST-0002, Bundesamt für Sicherheit in der Informationstechnik, July 2006. URL: <a href="https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Zertifizierung/Reporte/Reporte03/0351b_pdf.pdf?__blob=publicationFile&amp;v=1">https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Zertifizierung/Reporte/Reporte03/0351b_pdf.pdf?__blob=publicationFile&amp;v=1</a> (visited on 2024-07-02).&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:14">
+<p>Business Development Department FeliCa Business Division B2B Solutions Business Group. RC-S880. Datasheet FCE004-02-0802, Sony Corporation, February 2008. URL: <a href="http://www.sony.net/Products/felica/pdf/data/RC-S880_E.pdf">http://www.sony.net/Products/felica/pdf/data/RC-S880_E.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:15">
+<p>コンスーマー・プロフェッショナル＆デバイスグループ プロフェッショナル・ソリューション事業本部 FeliCa事業部 営業. RC-S889. Datasheet FCJ004-05-1012, Sony Corporation, December 2010. URL: <a href="http://www.sony.co.jp/Products/felica/business/data/RC-S889_J.pdf">http://www.sony.co.jp/Products/felica/business/data/RC-S889_J.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:16">
+<p>Sony Corporation. RC-S960/1 Composite Security Target. Technical Report 960-STL-E01-43, Direction Centrale de la Sécurité des Systèmes d'Information, April 2007. URL: <a href="https://cyber.gouv.fr/sites/default/files/IMG/certificat/dcssi-cible_2007-14en.pdf">https://cyber.gouv.fr/sites/default/files/IMG/certificat/dcssi-cible_2007-14en.pdf</a> (visited on 2024-06-22).&#160;<a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+<li id="fn:17">
+<p>Sony Corporation. RC-S892. January 2012. URL: <a href="https://web.archive.org/web/20120107071158/https://www.sony.co.jp/Products/felica/business/products/RC-S892.html">https://web.archive.org/web/20120107071158/https://www.sony.co.jp/Products/felica/business/products/RC-S892.html</a> (visited on 2024-07-03).&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+</li>
+<li id="fn:18">
+<p>Sales Department FeliCa Business Division B2B Solutions Business Group. RC-S885. Technical Report, Sony Corporation, January 2010. URL: <a href="http://www.sony.net:80/Products/felica/business/data/RC-S885_E.pdf">http://www.sony.net:80/Products/felica/business/data/RC-S885_E.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:18" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+</li>
+<li id="fn:19">
+<p>コンスーマー・プロフェッショナル＆デバイスグループ プロフェッショナル・ソリューション事業本部 FeliCa事業部 営業. RC-S888. Datasheet FCJ005-04-1012, Sony Corporation, December 2010. URL: <a href="http://www.sony.co.jp/Products/felica/business/data/RC-S888_J.pdf">http://www.sony.co.jp/Products/felica/business/data/RC-S888_J.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:19" title="Jump back to footnote 21 in the text">&#8617;</a></p>
+</li>
+<li id="fn:20">
+<p>コンスーマー・プロフェッショナル＆デバイスグループ プロフェッショナル・ソリューション事業本部 FeliCa事業部 営業. RC-S892. Datasheet FCJ006-02-1101, Sony Corporation, January 2011. URL: <a href="http://www.sony.co.jp/Products/felica/business/data/RC-S892_J.pdf">http://www.sony.co.jp/Products/felica/business/data/RC-S892_J.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:20" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+</li>
+<li id="fn:21">
+<p>Sony Corporation. RC-S962/1 Composite Security Target. Technical Report 962-STL-E01-10, Direction Centrale de la Sécurité des Systèmes d'Information, May 2008. URL: <a href="https://www.commoncriteriaportal.org/files/epfiles/dcssi-cible2008_18en.pdf">https://www.commoncriteriaportal.org/files/epfiles/dcssi-cible2008_18en.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 23 in the text">&#8617;</a></p>
+</li>
+<li id="fn:22">
+<p>Sony Corporation. Security Target RC-SA00/1 Series and RC-SA00/2 Series. Technical Report A00-STP-E01-40, Nederlands Schema voor Certificatie op het gebied van IT-Beveiliging, July 2012. URL: <a href="https://commoncriteriaportal.org/files/epfiles/[ST]%20A00-STP-E01-40.pdf">https://commoncriteriaportal.org/files/epfiles/[ST]%20A00-STP-E01-40.pdf</a> (visited on 2024-06-22).&#160;<a class="footnote-backref" href="#fnref:22" title="Jump back to footnote 24 in the text">&#8617;</a></p>
+</li>
+<li id="fn:23">
+<p>サービスビジネスグループ FeliCa事業部 営業部. RC-SA00. Technical Report J2012-29-02, Sony Corporation, May 2015. URL: <a href="http://www.sony.co.jp:80/Products/felica/business/data/RC-SA00_J.pdf">http://www.sony.co.jp:80/Products/felica/business/data/RC-SA00_J.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:23" title="Jump back to footnote 25 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:23" title="Jump back to footnote 25 in the text">&#8617;</a></p>
+</li>
+<li id="fn:24">
+<p>プロフェッショナル・ソリューション事業本部 FeliCa事業部 営業部. RC-S108. Datasheet J2014-02-00, Sony Corporation, June 2014. URL: <a href="http://www.sony.co.jp/Products/felica/business/data/RC-S108_J.pdf">http://www.sony.co.jp/Products/felica/business/data/RC-S108_J.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:24" title="Jump back to footnote 26 in the text">&#8617;</a></p>
+</li>
+<li id="fn:25">
+<p>FeliCa事業部 営業部. RC-S108/1. Datasheet J2020-01-00, Sony Corporation, October 2020. URL: <a href="https://www.sony.co.jp/Products/felica/business/data/RC-S108_1_J.pdf">https://www.sony.co.jp/Products/felica/business/data/RC-S108_1_J.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:25" title="Jump back to footnote 27 in the text">&#8617;</a></p>
+</li>
+<li id="fn:26">
+<p>サービスビジネスグループ FeliCa事業部 営業部. RC-S111. Datasheet J2017-01-02, Sony Corporation, June 2021. URL: <a href="https://www.sony.co.jp/Products/felica/business/data/RC-S111_J.pdf">https://www.sony.co.jp/Products/felica/business/data/RC-S111_J.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:26" title="Jump back to footnote 28 in the text">&#8617;</a></p>
+</li>
+<li id="fn:27">
+<p>Sony Corporation. Security Target RC-SA01/1 Series and RC-SA01/2 Series. Technical Report A01-ST-E01-11, Nederlands Schema voor Certificatie op het gebied van IT-Beveiliging, March 2014. URL: <a href="https://www.tuv-nederland.nl/assets/files/cerfiticaten/2019/07/a01-stp-e01-11.pdf">https://www.tuv-nederland.nl/assets/files/cerfiticaten/2019/07/a01-stp-e01-11.pdf</a> (visited on 2024-06-22).&#160;<a class="footnote-backref" href="#fnref:27" title="Jump back to footnote 29 in the text">&#8617;</a></p>
+</li>
+<li id="fn:28">
+<p>Sony Corporation. Security Target RC-SA04/1 Series. Technical Report A04-STP-E01-10, Nederlands Schema voor Certificatie op het gebied van IT-Beveiliging, March 2013. URL: <a href="https://www.tuv-nederland.nl/assets/files/cerfiticaten/2019/07/st-a04-stp-e01-10.pdf">https://www.tuv-nederland.nl/assets/files/cerfiticaten/2019/07/st-a04-stp-e01-10.pdf</a> (visited on 2024-06-22).&#160;<a class="footnote-backref" href="#fnref:28" title="Jump back to footnote 30 in the text">&#8617;</a></p>
+</li>
+<li id="fn:29">
+<p>Sony Corporation. JREM MN67S150-D Composite Security Target. Technical Report F31-STP-E01-70, Nederlands Schema voor Certificatie op het gebied van IT-Beveiliging, December 2014. URL: <a href="https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/[STP]%20F31-STP-E01-70.pdf">https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/[STP]%20F31-STP-E01-70.pdf</a> (visited on 2024-07-01).&#160;<a class="footnote-backref" href="#fnref:29" title="Jump back to footnote 31 in the text">&#8617;</a></p>
+</li>
+<li id="fn:30">
+<p>Panasonic Semiconductor Solutions Co., Ltd. MN67S150 Smartcard IC Security Target. Technical Report, Bundesamt für Sicherheit in der Informationstechnik, March 2015. URL: <a href="https://commoncriteriaportal.org/files/epfiles/0935b_pdf.pdf">https://commoncriteriaportal.org/files/epfiles/0935b_pdf.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:30" title="Jump back to footnote 32 in the text">&#8617;</a></p>
+</li>
+<li id="fn:31">
+<p>Sony Corporation. Security Target RC-SA08/1 and RC-SA08/2. Technical Report A08-STP-E01-51, Agence Nationale de la Sécurité des Systèmes d'Information, June 2017. URL: <a href="https://cyber.gouv.fr/sites/default/files/2017/09/anssi_cible2017_44en.pdf">https://cyber.gouv.fr/sites/default/files/2017/09/anssi_cible2017_44en.pdf</a> (visited on 2024-06-22).&#160;<a class="footnote-backref" href="#fnref:31" title="Jump back to footnote 33 in the text">&#8617;</a></p>
+</li>
+<li id="fn:32">
+<p>Sony Corporation. Security Target JREM 6K Contactless Smart Card IC chip with fast processing function for transport. Technical Report J6K-STP-E02-00, Japan Information Technology Security Evaluation and Certification Scheme, November 2019. URL: <a href="https://www.ipa.go.jp/security/jisec/hardware/certified-cert/c0660_st.pdf">https://www.ipa.go.jp/security/jisec/hardware/certified-cert/c0660_st.pdf</a> (visited on 2024-06-22).&#160;<a class="footnote-backref" href="#fnref:32" title="Jump back to footnote 34 in the text">&#8617;</a></p>
+</li>
+<li id="fn:33">
+<p>Sony Corporation. Security Target RC-SA20, RC-SA21 and RC-SA24 Series. Technical Report SA2-STP-E01-02, Nederlands Schema voor Certificatie op het gebied van IT-Beveiliging, June 2020. URL: <a href="https://www.tuv-nederland.nl/assets/files/cerfiticaten/2020/06/nscib-cc-214607-st.pdf">https://www.tuv-nederland.nl/assets/files/cerfiticaten/2020/06/nscib-cc-214607-st.pdf</a> (visited on 2024-06-22).&#160;<a class="footnote-backref" href="#fnref:33" title="Jump back to footnote 35 in the text">&#8617;</a></p>
+</li>
+<li id="fn:34">
+<p>サービスビジネスグループ FeliCa事業部 営業部. RC-S128. Datasheet J2021-02-01, Sony Corporation, June 2021. URL: <a href="https://www.sony.co.jp/Products/felica/business/data/RC-S128_J.pdf">https://www.sony.co.jp/Products/felica/business/data/RC-S128_J.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:34" title="Jump back to footnote 36 in the text">&#8617;</a></p>
+</li>
+<li id="fn:35">
+<p>サービスビジネスグループ FeliCa事業部 営業部. RC-S131. Datasheet J2021-03-01, Sony Corporation, June 2021. URL: <a href="https://www.sony.co.jp/Products/felica/business/data/RC-S131_J.pdf">https://www.sony.co.jp/Products/felica/business/data/RC-S131_J.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:35" title="Jump back to footnote 37 in the text">&#8617;</a></p>
+</li>
+<li id="fn:36">
+<p>サービスビジネスグループ FeliCa事業部 営業部. RC-S120. Datasheet J2020-03-01, Sony Corporation, November 2020. URL: <a href="https://www.sony.co.jp/Products/felica/business/data/RC-S120_J.pdf">https://www.sony.co.jp/Products/felica/business/data/RC-S120_J.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:36" title="Jump back to footnote 38 in the text">&#8617;</a></p>
+</li>
+<li id="fn:37">
+<p>クロゴ. 【最強の支払いガジェット】Sony推し払いキーホルダー【勇者の財布】. July 2021. URL: <a href="https://gadgethi.tech/sony-keyring/">https://gadgethi.tech/sony-keyring/</a> (visited on 2024-07-03).&#160;<a class="footnote-backref" href="#fnref:37" title="Jump back to footnote 39 in the text">&#8617;</a></p>
+</li>
+<li id="fn:38">
+<p>ソニー株式会社 \textbar  FeliCa \textbar  推し払いキーホルダー \textbar  製品紹介. URL: <a href="https://www.sony.co.jp/Products/felica/osk/">https://www.sony.co.jp/Products/felica/osk/</a> (visited on 2024-07-03).&#160;<a class="footnote-backref" href="#fnref:38" title="Jump back to footnote 40 in the text">&#8617;</a></p>
+</li>
+<li id="fn:39">
+<p>Sony Corporation. RC-S965. Datasheet FIJ004-03-1101, Sony Corporation, January 2011. URL: <a href="http://www.sony.co.jp/Products/felica/business/data/RC-S965_J.pdf">http://www.sony.co.jp/Products/felica/business/data/RC-S965_J.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:39" title="Jump back to footnote 41 in the text">&#8617;</a></p>
+</li>
+<li id="fn:40">
+<p>Sony Corporation. RC-S711・S712. March 2014. URL: <a href="https://web.archive.org/web/20140325111641/http://www.sony.co.jp:80/Products/felica/business/products/RC-S711_712.html">https://web.archive.org/web/20140325111641/http://www.sony.co.jp:80/Products/felica/business/products/RC-S711_712.html</a> (visited on 2024-07-02).&#160;<a class="footnote-backref" href="#fnref:40" title="Jump back to footnote 42 in the text">&#8617;</a></p>
+</li>
+<li id="fn:41">
+<p>サービスビジネスグループ FeliCa事業部 営業部. Felica Plug/NFC Dynamic Tag. Technical Report J2012-14-06, Sony Corporation, June 2021. URL: <a href="https://www.sony.co.jp/Products/felica/business/data/RC-S801_S802_J.pdf">https://www.sony.co.jp/Products/felica/business/data/RC-S801_S802_J.pdf</a> (visited on 2024-07-01).&#160;<a class="footnote-backref" href="#fnref:41" title="Jump back to footnote 43 in the text">&#8617;</a></p>
+</li>
+<li id="fn:42">
+<p>サービスビジネスグループ FeliCa事業部 営業部. RC-S967. Datasheet J2013-08-04, Sony Corporation, June 2021. URL: <a href="https://www.sony.co.jp/Products/felica/business/data/RC-S967_J.pdf">https://www.sony.co.jp/Products/felica/business/data/RC-S967_J.pdf</a> (visited on 2024-06-22).&#160;<a class="footnote-backref" href="#fnref:42" title="Jump back to footnote 44 in the text">&#8617;</a></p>
+</li>
+<li id="fn:43">
+<p>サービスビジネスグループ FeliCa事業部 営業部. RC-S732. Datasheet J2014-03-03, Sony Corporation, June 2021. URL: <a href="https://www.sony.co.jp/Products/felica/business/data/RC-S732_J.pdf">https://www.sony.co.jp/Products/felica/business/data/RC-S732_J.pdf</a> (visited on 2024-07-01).&#160;<a class="footnote-backref" href="#fnref:43" title="Jump back to footnote 45 in the text">&#8617;</a></p>
+</li>
+<li id="fn:45">
+<p>Sony Corporation. CXD3715GG/GU-x Security Target. Technical Report, UK IT Security Evaluation and Certification Scheme, January 2006.&#160;<a class="footnote-backref" href="#fnref:45" title="Jump back to footnote 46 in the text">&#8617;</a></p>
+</li>
+<li id="fn:46">
+<p>Japan Information Technology Security Evaluation and Certification Scheme. モバイル FeliCa IC チップファームウェア ( CXD 版 ) 認証報告書. Technical Report CRP-C0119-01, Japan Information Technology Security Evaluation and Certification Scheme, October 2007. URL: <a href="https://www.ipa.go.jp/archive/security/jisec/software/certified-cert/c0119_rpt.pdf">https://www.ipa.go.jp/archive/security/jisec/software/certified-cert/c0119_rpt.pdf</a> (visited on 2024-06-22).&#160;<a class="footnote-backref" href="#fnref:46" title="Jump back to footnote 47 in the text">&#8617;</a></p>
+</li>
+<li id="fn:47">
+<p>Japan Information Technology Security Evaluation and Certification Scheme. モバイル FeliCa IC チップファームウェア ( AE 版 ) 認証報告書. Technical Report CRP-C0109-01, Japan Information Technology Security Evaluation and Certification Scheme, July 2007. URL: <a href="https://www.ipa.go.jp/archive/security/jisec/software/certified-cert/c0109_rpt.pdf">https://www.ipa.go.jp/archive/security/jisec/software/certified-cert/c0109_rpt.pdf</a> (visited on 2024-06-23).&#160;<a class="footnote-backref" href="#fnref:47" title="Jump back to footnote 48 in the text">&#8617;</a></p>
+</li>
+<li id="fn:48">
+<p>Renesas Technology Corporation. HD65256D Version 01 Smartcard Security Target. Technical Report HD65256D-CC-ST-0002, Bundesamt für Sicherheit in der Informationstechnik, April 2007. URL: <a href="https://www.commoncriteriaportal.org/files/epfiles/0434b.pdf">https://www.commoncriteriaportal.org/files/epfiles/0434b.pdf</a> (visited on 2024-06-23).&#160;<a class="footnote-backref" href="#fnref:48" title="Jump back to footnote 49 in the text">&#8617;</a></p>
+</li>
+<li id="fn:49">
+<p>Taro Kurita. The Application of VDM (Vienna Development Method) to the Industrial Development of Firmware for a Smart Card IC Chip. <em>Math-for-Industry Lecture Note</em>, 61:59–74, March 2015. URL: <a href="https://hdl.handle.net/2324/1520943">https://hdl.handle.net/2324/1520943</a> (visited on 2024-06-19).&#160;<a class="footnote-backref" href="#fnref:49" title="Jump back to footnote 50 in the text">&#8617;</a></p>
+</li>
+<li id="fn:51">
+<p>Renesas Technology Corporation. HD65256D1 Version 03 Smartcard Security Target. Technical Report HD65256D1-CC-ST-0002, Bundesamt für Sicherheit in der Informationstechnik, August 2009. URL: <a href="https://www.commoncriteriaportal.org/files/epfiles/0529_ma1b_pdf.pdf">https://www.commoncriteriaportal.org/files/epfiles/0529_ma1b_pdf.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:51" title="Jump back to footnote 51 in the text">&#8617;</a></p>
+</li>
+<li id="fn:52">
+<p>Japan Information Technology Security Evaluation and Certification Scheme. モバイル FeliCa IC チップファームウェア ( T6N 版 ) 認証報告書. Technical Report CRP-C0251-01, Japan Information Technology Security Evaluation and Certification Scheme, March 2010. URL: <a href="https://www.ipa.go.jp/archive/security/jisec/software/certified-cert/c0251_rpt.pdf">https://www.ipa.go.jp/archive/security/jisec/software/certified-cert/c0251_rpt.pdf</a> (visited on 2024-06-23).&#160;<a class="footnote-backref" href="#fnref:52" title="Jump back to footnote 52 in the text">&#8617;</a></p>
+</li>
+<li id="fn:53">
+<p>Toshiba Corporation. T6ND4 Integrated Circuit Security Target. Technical Report CC-T6ND4-ST-ENG-001, SERTIT, November 2010. URL: <a href="https://sertit.no/getfile.php/134704-1607950173/SERTIT/Sertifikater/2010/20/%5BST-Lite%5D-CC-T6ND4-ST-ENG-001%20v0.1.pdf">https://sertit.no/getfile.php/134704-1607950173/SERTIT/Sertifikater/2010/20/%5BST-Lite%5D-CC-T6ND4-ST-ENG-001%20v0.1.pdf</a> (visited on 2024-06-23).&#160;<a class="footnote-backref" href="#fnref:53" title="Jump back to footnote 53 in the text">&#8617;</a></p>
+</li>
+<li id="fn:54">
+<p>Toshiba Corporation. T6NE1 Integrated Circuit Security Target. Technical Report CC-T6NE1-ST-ENG-001, SERTIT, May 2013. URL: <a href="https://www.commoncriteriaportal.org/files/epfiles/%5BST%5D%20CC-T6NE1-ST-ENG-001.pdf">https://www.commoncriteriaportal.org/files/epfiles/%5BST%5D%20CC-T6NE1-ST-ENG-001.pdf</a> (visited on 2024-06-23).&#160;<a class="footnote-backref" href="#fnref:54" title="Jump back to footnote 54 in the text">&#8617;</a></p>
+</li>
+<li id="fn:55">
+<p>FeliCa Networks, Inc. Security Target for Mobile FeliCa OS 3.0 on T6NE1. Technical Report F03T-ASEP01-E01-70, SERTIT, July 2016. URL: <a href="https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/[STP-T]%20F03T-ASEP01-E01-70.pdf">https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/[STP-T]%20F03T-ASEP01-E01-70.pdf</a> (visited on 2024-06-23).&#160;<a class="footnote-backref" href="#fnref:55" title="Jump back to footnote 55 in the text">&#8617;</a></p>
+</li>
+<li id="fn:56">
+<p>Samsung Electronics Co., Ltd. Project Kansa: Security Target Lite of Samsung S3CS9AB 32-bit RISC Microcontroller for Smart Card with specific IC Dedicated Software. Technical Report, Bundesamt für Sicherheit in der Informationstechnik, October 2013. URL: <a href="https://www.commoncriteriaportal.org/files/epfiles/0882b_pdf.pdf">https://www.commoncriteriaportal.org/files/epfiles/0882b_pdf.pdf</a> (visited on 2024-06-23).&#160;<a class="footnote-backref" href="#fnref:56" title="Jump back to footnote 56 in the text">&#8617;</a></p>
+</li>
+<li id="fn:57">
+<p>FeliCa Networks, Inc. Security Target for Mobile FeliCa OS 3.0 on S3CS9AB. Technical Report F03S-ASEP01-E01-70, SERTIT, August 2016. URL: <a href="https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/[STP-S]%20F03S-ASEP01-E01-70.pdf">https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/[STP-S]%20F03S-ASEP01-E01-70.pdf</a> (visited on 2024-06-23).&#160;<a class="footnote-backref" href="#fnref:57" title="Jump back to footnote 57 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascript/katex.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

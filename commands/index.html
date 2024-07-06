@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Overview - NFC-F Information</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">NFC-F Information</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../authentication/" class="nav-link">Authentication</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../systems/" class="nav-link">Systems</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">IC chips</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../IC-chips/card/" class="dropdown-item">Tags</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Commands</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Overview</a>
+</li>
+                                    
+<li>
+    <a href="adhoc/" class="dropdown-item">Ad-hoc</a>
+</li>
+                                    
+<li>
+    <a href="authentication/" class="dropdown-item">Authentication</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../IC-chips/card/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="adhoc/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#command-overview" class="nav-link">Command overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="command-overview">Command overview</h1>
+<p>Fields suffixed with <code>?</code> are unconfirmed educated guesses which are potentially incorrect and may in reality be reserved for future use.</p>
+<p>Note: likely missing some FeliCa Ad-Hoc Link Protocol (Mobile FeliCa OS?) commands.</p>
+<p>Most of this information may be incorrect; use with caution.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required Mode</th>
+<th>Req. Code</th>
+<th>Resp. Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Polling<sup id="fnref24:1"><a class="footnote-ref" href="#fn:1">4</a></sup><sup id="fnref16:2"><a class="footnote-ref" href="#fn:2">5</a></sup></td>
+<td>0</td>
+<td><code>00</code></td>
+<td><code>01</code></td>
+</tr>
+<tr>
+<td>Request Service<sup id="fnref23:1"><a class="footnote-ref" href="#fn:1">4</a></sup><sup id="fnref15:2"><a class="footnote-ref" href="#fn:2">5</a></sup></td>
+<td>Any</td>
+<td><code>02</code></td>
+<td><code>03</code></td>
+</tr>
+<tr>
+<td>Request Response<sup id="fnref22:1"><a class="footnote-ref" href="#fn:1">4</a></sup><sup id="fnref14:2"><a class="footnote-ref" href="#fn:2">5</a></sup></td>
+<td>Any</td>
+<td><code>04</code></td>
+<td><code>05</code></td>
+</tr>
+<tr>
+<td>Read (Unencrypted)<sup id="fnref21:1"><a class="footnote-ref" href="#fn:1">4</a></sup><sup id="fnref13:2"><a class="footnote-ref" href="#fn:2">5</a></sup></td>
+<td>0</td>
+<td><code>06</code></td>
+<td><code>07</code></td>
+</tr>
+<tr>
+<td>Write (Unencrypted)<sup id="fnref20:1"><a class="footnote-ref" href="#fn:1">4</a></sup><sup id="fnref12:2"><a class="footnote-ref" href="#fn:2">5</a></sup></td>
+<td>0</td>
+<td><code>08</code></td>
+<td><code>09</code></td>
+</tr>
+<tr>
+<td>Search Service Code<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">6</a></sup><sup id="fnref11:2"><a class="footnote-ref" href="#fn:2">5</a></sup></td>
+<td>Any</td>
+<td><code>0A</code></td>
+<td><code>0B</code></td>
+</tr>
+<tr>
+<td>Request System Code<sup id="fnref19:1"><a class="footnote-ref" href="#fn:1">4</a></sup><sup id="fnref10:2"><a class="footnote-ref" href="#fn:2">5</a></sup></td>
+<td>Any</td>
+<td><code>0C</code></td>
+<td><code>0D</code></td>
+</tr>
+<tr>
+<td>Request Block Information<sup id="fnref:rbi"><a class="footnote-ref" href="#fn:rbi">1</a></sup><sup id="fnref7:4"><a class="footnote-ref" href="#fn:4">7</a></sup></td>
+<td>Any</td>
+<td><code>0E</code>?</td>
+<td><code>0F</code>?</td>
+</tr>
+<tr>
+<td><a href="authentication/#authentication-start-des">Authentication Start (DES)</a></td>
+<td>0</td>
+<td><code>10</code></td>
+<td><code>11</code></td>
+</tr>
+<tr>
+<td><a href="authentication/#authentication-finish-des">Authentication Finish (DES)</a></td>
+<td>1 or 2 in DES</td>
+<td><code>12</code></td>
+<td><code>13</code></td>
+</tr>
+<tr>
+<td>Read (DES)<sup id="fnref18:1"><a class="footnote-ref" href="#fn:1">4</a></sup><sup id="fnref9:2"><a class="footnote-ref" href="#fn:2">5</a></sup></td>
+<td>2 in DES</td>
+<td><code>14</code></td>
+<td><code>15</code></td>
+</tr>
+<tr>
+<td>Write (DES)<sup id="fnref17:1"><a class="footnote-ref" href="#fn:1">4</a></sup><sup id="fnref8:2"><a class="footnote-ref" href="#fn:2">5</a></sup></td>
+<td>2 in DES</td>
+<td><code>16</code></td>
+<td><code>17</code></td>
+</tr>
+<tr>
+<td>???</td>
+<td>2 in DES?</td>
+<td><code>18</code></td>
+<td><code>19</code></td>
+</tr>
+<tr>
+<td>???</td>
+<td>2 in DES?</td>
+<td><code>1A</code></td>
+<td><code>1B</code></td>
+</tr>
+<tr>
+<td>???</td>
+<td>2 in DES?</td>
+<td><code>1C</code></td>
+<td><code>1D</code></td>
+</tr>
+<tr>
+<td>Request Block Information Ex<sup id="fnref:rbie"><a class="footnote-ref" href="#fn:rbie">2</a></sup><sup id="fnref6:4"><a class="footnote-ref" href="#fn:4">7</a></sup></td>
+<td>Any?</td>
+<td><code>1E</code>?</td>
+<td><code>1F</code>?</td>
+</tr>
+<tr>
+<td>???</td>
+<td>?</td>
+<td><code>20</code></td>
+<td><code>21</code></td>
+</tr>
+<tr>
+<td>Get Container Issue Information<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">8</a></sup></td>
+<td>0 (Any?)</td>
+<td><code>22</code></td>
+<td><code>23</code></td>
+</tr>
+<tr>
+<td>???</td>
+<td>???</td>
+<td><code>24</code></td>
+<td><code>25</code></td>
+</tr>
+<tr>
+<td>???</td>
+<td>???</td>
+<td><code>26</code></td>
+<td><code>27</code></td>
+</tr>
+<tr>
+<td>Get Node Property<sup id="fnref16:1"><a class="footnote-ref" href="#fn:1">4</a></sup></td>
+<td>Any</td>
+<td><code>28</code></td>
+<td><code>29</code></td>
+</tr>
+<tr>
+<td>???</td>
+<td>?</td>
+<td><code>2A</code></td>
+<td><code>2B</code></td>
+</tr>
+<tr>
+<td>???</td>
+<td>?</td>
+<td><code>2C</code></td>
+<td><code>2D</code></td>
+</tr>
+<tr>
+<td>???</td>
+<td>?</td>
+<td><code>2E</code></td>
+<td><code>2F</code></td>
+</tr>
+<tr>
+<td>???</td>
+<td>?</td>
+<td><code>30</code></td>
+<td><code>31</code></td>
+</tr>
+<tr>
+<td>Request Service v2<sup id="fnref15:1"><a class="footnote-ref" href="#fn:1">4</a></sup><sup id="fnref7:2"><a class="footnote-ref" href="#fn:2">5</a></sup></td>
+<td>Any</td>
+<td><code>32</code></td>
+<td><code>33</code></td>
+</tr>
+<tr>
+<td>Read (MAC)<sup id="fnref14:1"><a class="footnote-ref" href="#fn:1">4</a></sup></td>
+<td>0 or 1 in MAC</td>
+<td><code>34</code></td>
+<td><code>35</code></td>
+</tr>
+<tr>
+<td>Write (MAC)<sup id="fnref13:1"><a class="footnote-ref" href="#fn:1">4</a></sup></td>
+<td>0 or 1 in MAC</td>
+<td><code>36</code></td>
+<td><code>37</code></td>
+</tr>
+<tr>
+<td>Get System Status<sup id="fnref12:1"><a class="footnote-ref" href="#fn:1">4</a></sup><sup id="fnref6:2"><a class="footnote-ref" href="#fn:2">5</a></sup></td>
+<td>Any</td>
+<td><code>38</code></td>
+<td><code>39</code></td>
+</tr>
+<tr>
+<td>???</td>
+<td>?</td>
+<td><code>3A</code></td>
+<td><code>3B</code></td>
+</tr>
+<tr>
+<td>Request Specification Version<sup id="fnref11:1"><a class="footnote-ref" href="#fn:1">4</a></sup><sup id="fnref5:2"><a class="footnote-ref" href="#fn:2">5</a></sup></td>
+<td>Any</td>
+<td><code>3C</code></td>
+<td><code>3D</code></td>
+</tr>
+<tr>
+<td>Reset Mode<sup id="fnref10:1"><a class="footnote-ref" href="#fn:1">4</a></sup><sup id="fnref4:2"><a class="footnote-ref" href="#fn:2">5</a></sup></td>
+<td>Any</td>
+<td><code>3E</code></td>
+<td><code>3F</code></td>
+</tr>
+<tr>
+<td><a href="authentication/#authentication-start-aes">Authentication Start (AES)</a></td>
+<td>0</td>
+<td><code>40</code></td>
+<td><code>41</code></td>
+</tr>
+<tr>
+<td><a href="authentication/#authentication-finish-aes">Authentication Finish (AES)</a></td>
+<td>1 or 2 in AES</td>
+<td><code>42</code></td>
+<td><code>43</code></td>
+</tr>
+<tr>
+<td>Read (AES)<sup id="fnref9:1"><a class="footnote-ref" href="#fn:1">4</a></sup><sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">5</a></sup></td>
+<td>2 in AES</td>
+<td><code>44</code></td>
+<td><code>45</code></td>
+</tr>
+<tr>
+<td>Write (AES)<sup id="fnref8:1"><a class="footnote-ref" href="#fn:1">4</a></sup><sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">5</a></sup></td>
+<td>2 in AES</td>
+<td><code>46</code></td>
+<td><code>47</code></td>
+</tr>
+<tr>
+<td>Get ???</td>
+<td>2 in AES?</td>
+<td><code>48</code></td>
+<td><code>49</code></td>
+</tr>
+<tr>
+<td>???</td>
+<td>2 in AES?</td>
+<td><code>4A</code></td>
+<td><code>4B</code></td>
+</tr>
+<tr>
+<td>Update Random ID<sup id="fnref7:1"><a class="footnote-ref" href="#fn:1">4</a></sup><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">5</a></sup></td>
+<td>2 in AES?</td>
+<td><code>4C</code></td>
+<td><code>4D</code></td>
+</tr>
+<tr>
+<td>Set Node Property<sup id="fnref6:1"><a class="footnote-ref" href="#fn:1">4</a></sup></td>
+<td>2 in AES?</td>
+<td><code>78</code></td>
+<td><code>79</code></td>
+</tr>
+<tr>
+<td>Activate<sup id="fnref7:6"><a class="footnote-ref" href="#fn:6">9</a></sup></td>
+<td>Any?</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Inactivate<sup id="fnref6:6"><a class="footnote-ref" href="#fn:6">9</a></sup></td>
+<td>Any?</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td><a href="adhoc/#activate2">Activate2</a><sup id="fnref5:6"><a class="footnote-ref" href="#fn:6">9</a></sup><sup id="fnref2:7"><a class="footnote-ref" href="#fn:7">10</a></sup></td>
+<td>0 (Any?)</td>
+<td><code>A4</code></td>
+<td><code>A5</code></td>
+</tr>
+<tr>
+<td>Inactivate2<sup id="fnref4:6"><a class="footnote-ref" href="#fn:6">9</a></sup></td>
+<td>Any?</td>
+<td><code>A6</code>?</td>
+<td><code>A7</code>?</td>
+</tr>
+<tr>
+<td><a href="adhoc/#push">Push</a><sup id="fnref3:6"><a class="footnote-ref" href="#fn:6">9</a></sup><sup id="fnref:7"><a class="footnote-ref" href="#fn:7">10</a></sup></td>
+<td>0 (Any?)</td>
+<td><code>B0</code></td>
+<td><code>B1</code></td>
+</tr>
+<tr>
+<td>Pull<sup id="fnref2:6"><a class="footnote-ref" href="#fn:6">9</a></sup></td>
+<td>Any?</td>
+<td><code>B2</code>?</td>
+<td><code>B3</code>?</td>
+</tr>
+<tr>
+<td>Get Ad-hoc Status<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">9</a></sup></td>
+<td>Any?</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Register Issue ID<sup id="fnref5:4"><a class="footnote-ref" href="#fn:4">7</a></sup><sup id="fnref6:8"><a class="footnote-ref" href="#fn:8">11</a></sup></td>
+<td>2 or 3</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Register Area<sup id="fnref4:4"><a class="footnote-ref" href="#fn:4">7</a></sup><sup id="fnref5:8"><a class="footnote-ref" href="#fn:8">11</a></sup></td>
+<td>2 or 3</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Register Service<sup id="fnref3:4"><a class="footnote-ref" href="#fn:4">7</a></sup><sup id="fnref4:8"><a class="footnote-ref" href="#fn:8">11</a></sup></td>
+<td>2 or 3</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Register Issue ID Ex<sup id="fnref2:4"><a class="footnote-ref" href="#fn:4">7</a></sup></td>
+<td>2 or 3</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Register Separate System(?)<sup id="fnref:separate"><a class="footnote-ref" href="#fn:separate">3</a></sup><sup id="fnref:9"><a class="footnote-ref" href="#fn:9">12</a></sup></td>
+<td>??</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Set Relational Service<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">7</a></sup></td>
+<td>??</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Change System Block<sup id="fnref3:8"><a class="footnote-ref" href="#fn:8">11</a></sup></td>
+<td>3</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Register Manufacture ID<sup id="fnref2:8"><a class="footnote-ref" href="#fn:8">11</a></sup></td>
+<td>2 or 3</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Self Diagnosis<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">11</a></sup></td>
+<td>2</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Ping (echo back)<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">13</a></sup></td>
+<td>Any</td>
+<td>F0</td>
+<td>F0</td>
+</tr>
+<tr>
+<td>Delete Key<sup id="fnref5:1"><a class="footnote-ref" href="#fn:1">4</a></sup></td>
+<td>??</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Set Node Property<sup id="fnref4:1"><a class="footnote-ref" href="#fn:1">4</a></sup></td>
+<td>??</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Set Random ID Option<sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">4</a></sup></td>
+<td>??</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Disable Issuance<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">4</a></sup></td>
+<td>??</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Set Diversification Code<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">4</a></sup></td>
+<td>??</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Tracking<sup id="fnref4:11"><a class="footnote-ref" href="#fn:11">14</a></sup></td>
+<td>??</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Reset Data<sup id="fnref3:11"><a class="footnote-ref" href="#fn:11">14</a></sup></td>
+<td>??</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Reset All<sup id="fnref2:11"><a class="footnote-ref" href="#fn:11">14</a></sup></td>
+<td>??</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>Terminate<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">14</a></sup></td>
+<td>??</td>
+<td>??</td>
+<td>??</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:rbi">
+<p>Assumed from previous Request System Code command within RC-S493B reader product specifications&#160;<a class="footnote-backref" href="#fnref:rbi" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:rbie">
+<p>Guessed codes: RBI command + 0x10, like Read DES and AES commands&#160;<a class="footnote-backref" href="#fnref:rbie" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:separate">
+<p>This command is not officially named, only referred to as "分轄要求" (Separation request).&#160;<a class="footnote-backref" href="#fnref:separate" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:1">
+<p>Secure Technology &amp; Solutions Division. <em>FeliCa カード ユーザーズマニュアル 抜粋版</em>. March 2024. URL: <a href="https://www.sony.co.jp/Products/felica/business/tech-support/data/card_usersmanual_2.21j.pdf">https://www.sony.co.jp/Products/felica/business/tech-support/data/card_usersmanual_2.21j.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref17:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref18:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref19:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref20:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref21:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref22:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref23:1" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref24:1" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>onakasuita. FeliCa/コマンド - おなかすいたWiki！. URL: <a href="https://wiki.onakasuita.org/pukiwiki/?FeliCa%2F%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">https://wiki.onakasuita.org/pukiwiki/?FeliCa%2F%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89</a> (visited on 2024-06-18).&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:2" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:2" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:2" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:2" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:2" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:2" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:2" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:2" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:2" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:2" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:2" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:2" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:2" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Stephen Tiedemann. Nfcpy/src/nfc/tag/tt3_sony.py at v1.0.4 · nfcpy/nfcpy. March 2022. URL: <a href="https://github.com/nfcpy/nfcpy/blob/v1.0.4/src/nfc/tag/tt3_sony.py">https://github.com/nfcpy/nfcpy/blob/v1.0.4/src/nfc/tag/tt3_sony.py</a> (visited on 2024-06-18).&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Sony Corporation. RC-S493B Product Specifications (Preliminary). Technical Report M440-E0.9-10, Federal Communications Commission, May 2008. URL: <a href="https://fccid.io/AK8RCS493B/User-Manual/User-Manual-950071.pdf">https://fccid.io/AK8RCS493B/User-Manual/User-Manual-950071.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:4" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:4" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:4" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:4" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:4" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:4" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>gungun256. モバイルFeliCaコンテナ発行情報取得アプリ. August 2016. URL: <a href="https://play.google.com/store/apps/details?id=net.kokozo.android.nfc.getcontainerissueinfooffelica">https://play.google.com/store/apps/details?id=net.kokozo.android.nfc.getcontainerissueinfooffelica</a>.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>昭彦 山形 and 顕 深田. Ｉｃカード及び情報処理端末、３者間データ通信システム及び方法. February 2005. URL: <a href="https://patents.google.com/patent/JP3617509B2/ja">https://patents.google.com/patent/JP3617509B2/ja</a> (visited on 2024-06-18).&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:6" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:6" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:6" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:6" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:6" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:6" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>Sony Corporation. Arduino向けRC-S620/S制御ライブラリの提供. November 2010. URL: <a href="http://blog.felicalauncher.com/?p=2677">http://blog.felicalauncher.com/?p=2677</a> (visited on 2024-06-18).&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:7" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>哲郎 後藤, 伸一 福田, 憲人 三保田, and 正俊 上野. 通信装置及び通信方法、コンピューター・プログラム、並びに通信システム. March 2011. URL: <a href="https://patents.google.com/patent/JP4661952B2/ja">https://patents.google.com/patent/JP4661952B2/ja</a> (visited on 2024-06-18).&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:8" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:8" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:8" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:8" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:8" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>Taro Kurita and 太郎 栗田. データ通信装置及びデータ通信装置のメモリ管理方法. July 2005. URL: <a href="https://patents.google.com/patent/JP2005196412A/ja">https://patents.google.com/patent/JP2005196412A/ja</a> (visited on 2024-06-18).&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>NXP Semiconductors. AN10682 - How to use PN533. Application Note 157631, NXP Semiconductors, 2018. URL: <a href="https://www.nxp.com/docs/en/nxp/application-notes/AN10682.pdf">https://www.nxp.com/docs/en/nxp/application-notes/AN10682.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>里志 吉田 and 勲 伊藤. 情報処理装置および方法、並びにプログラム. September 2014. URL: <a href="https://patents.google.com/patent/JP5585699B2/ja">https://patents.google.com/patent/JP5585699B2/ja</a> (visited on 2024-06-18).&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:11" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:11" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:11" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../javascript/katex.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Systems - NFC-F Information</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">NFC-F Information</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../authentication/" class="nav-link">Authentication</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Systems</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">IC chips</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../IC-chips/card/" class="dropdown-item">Tags</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Commands</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../commands/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../commands/adhoc/" class="dropdown-item">Ad-hoc</a>
+</li>
+                                    
+<li>
+    <a href="../commands/authentication/" class="dropdown-item">Authentication</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../authentication/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../IC-chips/card/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#system-codes" class="nav-link">System codes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="system-codes">System codes</h1>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>サイバネ規格 (CJRC)<sup id="fnref:cybernet"><a class="footnote-ref" href="#fn:cybernet">1</a></sup><sup id="fnref29:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref44:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>0003</code></td>
+</tr>
+<tr>
+<td>ナイスパス<sup id="fnref28:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref43:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>040F</code></td>
+</tr>
+<tr>
+<td>LuLuCa<sup id="fnref42:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>04A6</code></td>
+</tr>
+<tr>
+<td>楽天Edy<sup id="fnref27:1"><a class="footnote-ref" href="#fn:1">3</a></sup></td>
+<td><code>04C0</code></td>
+</tr>
+<tr>
+<td>QUICPay<sup id="fnref41:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>04C1</code></td>
+</tr>
+<tr>
+<td>nanaco<sup id="fnref40:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>04C7</code></td>
+</tr>
+<tr>
+<td>NDEF<sup id="fnref26:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref39:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>12FC</code></td>
+</tr>
+<tr>
+<td>HCE-F<sup id="fnref25:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref38:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>4XXX</code></td>
+</tr>
+<tr>
+<td>深圳通<sup id="fnref24:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref37:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>8005</code></td>
+</tr>
+<tr>
+<td>八達通<sup id="fnref23:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref36:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>8008</code></td>
+</tr>
+<tr>
+<td>ひまわりバスカード<sup id="fnref35:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>800D</code></td>
+</tr>
+<tr>
+<td>長崎スマートカード<sup id="fnref34:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>8016</code></td>
+</tr>
+<tr>
+<td>せたまる<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">5</a></sup></td>
+<td><code>802B</code></td>
+</tr>
+<tr>
+<td>北海道北見バスICカード<sup id="fnref33:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>804C</code></td>
+</tr>
+<tr>
+<td>LuLuCa<sup id="fnref32:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>804C</code></td>
+</tr>
+<tr>
+<td>近江鉄道バスICカード<sup id="fnref22:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref31:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>8074</code></td>
+</tr>
+<tr>
+<td>BIG ECHO club DAM メンバーズカード<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">6</a></sup></td>
+<td><code>80BB</code></td>
+</tr>
+<tr>
+<td>IruCa<sup id="fnref21:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref30:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>80DE</code></td>
+</tr>
+<tr>
+<td>ICい～カード<sup id="fnref20:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref29:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>80E0</code></td>
+</tr>
+<tr>
+<td>ICa<sup id="fnref28:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>80EF</code></td>
+</tr>
+<tr>
+<td>楽天Edy<sup id="fnref2:5"><a class="footnote-ref" href="#fn:5">7</a></sup></td>
+<td><code>811D</code></td>
+</tr>
+<tr>
+<td>CI-CA<sup id="fnref19:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref27:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>8157</code></td>
+</tr>
+<tr>
+<td>いわさきICカード<sup id="fnref18:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref26:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>8194</code></td>
+</tr>
+<tr>
+<td>RapiCa<sup id="fnref17:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref25:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>8194</code></td>
+</tr>
+<tr>
+<td>Fuji Xerox IC Card<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">8</a></sup></td>
+<td><code>81D0</code></td>
+</tr>
+<tr>
+<td>NicoPa<sup id="fnref16:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref24:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>8287</code></td>
+</tr>
+<tr>
+<td>ecomyca <sup id="fnref:ecomyca"><a class="footnote-ref" href="#fn:ecomyca">2</a></sup><sup id="fnref15:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref23:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>832C</code></td>
+</tr>
+<tr>
+<td>passca<sup id="fnref14:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref22:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>832C</code></td>
+</tr>
+<tr>
+<td>hareca<sup id="fnref21:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>83CC</code></td>
+</tr>
+<tr>
+<td>WAON<sup id="fnref13:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref20:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>852B</code></td>
+</tr>
+<tr>
+<td>ayuca<sup id="fnref19:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>83EE</code></td>
+</tr>
+<tr>
+<td>EX-ICカード<sup id="fnref18:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>854C</code></td>
+</tr>
+<tr>
+<td>PASPY<sup id="fnref17:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>8592</code></td>
+</tr>
+<tr>
+<td>Blackboard<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">7</a></sup></td>
+<td><code>8620</code></td>
+</tr>
+<tr>
+<td>itappy<sup id="fnref12:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref16:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>862C</code></td>
+</tr>
+<tr>
+<td>SAPICA<sup id="fnref11:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref15:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>865E</code></td>
+</tr>
+<tr>
+<td>SuiCa<sup id="fnref10:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref14:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>86A7</code></td>
+</tr>
+<tr>
+<td>Felicitous Common-use Format<sup id="fnref13:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>8760</code></td>
+</tr>
+<tr>
+<td>FeliCa Lite(-S)<sup id="fnref9:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref12:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>88B4</code></td>
+</tr>
+<tr>
+<td>NORUCA<sup id="fnref8:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref11:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>8B43</code></td>
+</tr>
+<tr>
+<td>りゅーと<sup id="fnref10:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>8B5D</code></td>
+</tr>
+<tr>
+<td>楽天Edy<sup id="fnref9:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>8B61</code></td>
+</tr>
+<tr>
+<td>らんでんカード<sup id="fnref7:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref8:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>8B98</code></td>
+</tr>
+<tr>
+<td>大学生協組合員証ICカード<sup id="fnref7:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>8E4B</code></td>
+</tr>
+<tr>
+<td>OKICA<sup id="fnref6:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>8FC1</code></td>
+</tr>
+<tr>
+<td>Kartu Multi-Trip<sup id="fnref6:1"><a class="footnote-ref" href="#fn:1">3</a></sup></td>
+<td><code>90B7</code></td>
+</tr>
+<tr>
+<td>はやかけん<sup id="fnref5:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref5:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>927A</code></td>
+</tr>
+<tr>
+<td>MRT Jakarta<sup id="fnref4:1"><a class="footnote-ref" href="#fn:1">3</a></sup></td>
+<td><code>9373</code></td>
+</tr>
+<tr>
+<td>エヌタスTカード<sup id="fnref4:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>93EC</code></td>
+</tr>
+<tr>
+<td>JIS X 6319-4:2016<sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>AAXX</code></td>
+</tr>
+<tr>
+<td>FeliCa Secure ID<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">9</a></sup></td>
+<td><code>957A</code></td>
+</tr>
+<tr>
+<td>FeliCa Networks Common Area (共通領域)<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>FE00</code></td>
+</tr>
+<tr>
+<td>FeliCa Plug<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">3</a></sup><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">4</a></sup></td>
+<td><code>FEE1</code></td>
+</tr>
+</tbody>
+</table>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:cybernet">
+<p>See <a href="https://github.com/metrodroid/metrodroid/wiki/IC-%28Japan%29">Metrodroid documentation</a> for further details.&#160;<a class="footnote-backref" href="#fnref:cybernet" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ecomyca">
+<p>See <a href="https://miraicorp.blog.fc2.com/blog-entry-474.html">ecomyca(えこまいか)の技術情報</a> for further details.&#160;<a class="footnote-backref" href="#fnref:ecomyca" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:1">
+<p>Michael Farrell. FeliCa. December 2019. URL: <a href="https://github.com/metrodroid/metrodroid/wiki/FeliCa">https://github.com/metrodroid/metrodroid/wiki/FeliCa</a> (visited on 2024-06-18).&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref17:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref18:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref19:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref20:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref21:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref22:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref23:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref24:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref25:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref26:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref27:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref28:1" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref29:1" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Tanaka Ryoga. TRETJapanNFCReader/Sources/FeliCa/_FeliCa/FeliCaSystemCode.swift at 03470a515c0b06d762de39e6d80f9a07ed502cae · treastrain/TRETJapanNFCReader. November 2022. URL: <a href="https://github.com/treastrain/TRETJapanNFCReader/blob/03470a515c0b06d762de39e6d80f9a07ed502cae/Sources/FeliCa/_FeliCa/FeliCaSystemCode.swift">https://github.com/treastrain/TRETJapanNFCReader/blob/03470a515c0b06d762de39e6d80f9a07ed502cae/Sources/FeliCa/_FeliCa/FeliCaSystemCode.swift</a> (visited on 2024-06-18).&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref17:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref18:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref19:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref20:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref21:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref22:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref23:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref24:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref25:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref26:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref27:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref28:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref29:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref30:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref31:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref32:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref33:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref34:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref35:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref36:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref37:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref38:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref39:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref40:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref41:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref42:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref43:2" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref44:2" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>jennychan. Suica他. URL: <a href="http://jennychan.web.fc2.com/format/suica.html">http://jennychan.web.fc2.com/format/suica.html</a> (visited on 2024-06-18).&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>jennychan. BIG ECHO clubDAM members caed. URL: <a href="http://jennychan.web.fc2.com/format/clubdam.html">http://jennychan.web.fc2.com/format/clubdam.html</a> (visited on 2024-06-18).&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Stephen Tiedemann. Nfcpy/src/nfc/tag/tt3_sony.py at v1.0.4 · nfcpy/nfcpy. March 2022. URL: <a href="https://github.com/nfcpy/nfcpy/blob/v1.0.4/src/nfc/tag/tt3_sony.py">https://github.com/nfcpy/nfcpy/blob/v1.0.4/src/nfc/tag/tt3_sony.py</a> (visited on 2024-06-18).&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:5" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>Fuji Xerox Co. Ltd. <em>IC カードリーダーD 取扱説明書</em>. July 2020. URL: <a href="https://assets-fb.fujifilm.com/files/support/manual/mf/ap7_5022/pdf/me8392j1-3.pdf?VersionId=1s5UIvQBSKFgXQSbHMmf_NBJYIuJfsrk">https://assets-fb.fujifilm.com/files/support/manual/mf/ap7_5022/pdf/me8392j1-3.pdf?VersionId=1s5UIvQBSKFgXQSbHMmf_NBJYIuJfsrk</a>.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>FeliCa Business Division. フォーマット判別シーケンス設計ガイドライン. Technical Report M621-J01-21, Sony Corporation, April 2021. URL: <a href="https://www.sony.co.jp/Products/felica/business/tech-support/data/M621_FormatGuidelines_1.21j.pdf">https://www.sony.co.jp/Products/felica/business/tech-support/data/M621_FormatGuidelines_1.21j.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../javascript/katex.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

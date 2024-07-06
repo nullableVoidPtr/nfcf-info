@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Authentication - NFC-F Information</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">NFC-F Information</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Authentication</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../systems/" class="nav-link">Systems</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">IC chips</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../IC-chips/card/" class="dropdown-item">Tags</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Commands</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../commands/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../commands/adhoc/" class="dropdown-item">Ad-hoc</a>
+</li>
+                                    
+<li>
+    <a href="../commands/authentication/" class="dropdown-item">Authentication</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../systems/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#mutual-authentication" class="nav-link">Mutual Authentication</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#aes" class="nav-link">AES</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="mutual-authentication">Mutual Authentication</h2>
+<h3 id="des">DES</h3>
+<h4 id="procedure">Procedure</h4>
+<pre class="mermaid"><code>sequenceDiagram
+    Note over R/W,PICC: Authentication1
+    R/W-&gt;&gt;PICC: [Area code list, Service code list, Reader challenge];
+    PICC-&gt;&gt;R/W: [Response to reader challenge, Card challenge];
+    Note over R/W,PICC: Authentication2
+    R/W-&gt;&gt;PICC: [Response to card challenge];
+    PICC-&gt;&gt;R/W: [IDtc, IDi, PMi];</code></pre>
+<h4 id="group-service-key-user-service-key">Group Service Key &amp; User Service Key</h4>
+<blockquote>
+<p>TODO: actually confirm definition of Group Service Key and User Service Key</p>
+</blockquote>
+<p>Mentioned in Security Target documents<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> and referred to as the "Area Intermediate Key" and "Service Intermediate Key" respectively in patent filings<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. This keypair is used as access keys and as intermediates in diversified key generation when authenticating to a FeliCa IC.</p>
+<p>A keypair is used in conjunction with a fixed set of area codes (group service) and service codes (user service) respectively.</p>
+<p>A GSK is composed of the System Key, the Area 0000 key, and all the keys of the specified subareas, and relates to a corresponding Area Code List. As generating a GSK requires the PICC's System Key as an initialisation vector, this means the issuer is the root of trust. The GSK is generated by continually encrypting with DES using each specified area's key as the encryption key.</p>
+<p>GSKs can be appended to, which is useful if an area owner wants to provide authenticated capabilities to the owners of a sub area. However, the appended area(s) must be a direct subarea of one of the prior areas. Suppose the owner of subareas 1100 and 2100 wishes to generate their own GSK and they receive a GSK from the owner of Area 1000, which already corresponds to the System, Area 0000, and Area 1000. The owner can only append the key for Area 1100, as appending Area 2100 would be invalid(?).</p>
+<p>Upon the creation of a GSK, the USK can be created. The USK is composed of the GSK, and all the keys of the specified services, and relates to a corresponding Service Code List. As the USK uses the GSK as an initialisation vector, its GSK is then immutable and cannot be appended to without creating a new related USK. The USK is generated by continually encrypting with DES using each corresponding service's key as the encryption key.</p>
+<p>Similar to GSKs, USKs can be appended to, which is useful if the owner of a service wants to provide authenticated capabilities on their service to other users. However, the appended service(s) must be belong to one of the areas specified in its corresponding GSK.</p>
+<p>These keys are a precursor to the 3DES keys used in mutual authentication<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup>:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+K_{bc} &amp;= IDm \oplus K_{gs} \\
+K_{ac} &amp;= \text{DESEnc}_{IDm}(K_{us}) \\
+K_b  &amp;= K_{ac}||K_{bc} \\
+K_a  &amp;= K_{bc}||\text{DESEnc}_{K_{ac}}(K_{bc})
+\end{aligned}
+\]</div>
+<p>Following mutual authentication, the reader-generated R<sub>a</sub> is the initial transaction ID, whereas the card-generated R<sub>b</sub> is the shared DES transaction key<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup><sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.</p>
+<h2 id="aes">AES</h2>
+<h3 id="group-key">Group Key</h3>
+<p>Of unknown structure; mentioned in several public Security Target documents, and one with DES out-of-scope does not reference a manual for generating GSKs or USKs<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>, meaning that this pertains to only the AES authentication.</p>
+<p>It is unknown if and how access control is implemented across managers/issuers, and whether it is constructed similar to GSKs and USKs.</p>
+<p>A Group Key may be a merger of both GSK and USK, into one key and corresponding list of areas and services.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Sony Corporation. Security Target RC-SA00/1 Series and RC-SA00/2 Series. Technical Report A00-STP-E01-40, Nederlands Schema voor Certificatie op het gebied van IT-Beveiliging, July 2012. URL: <a href="https://commoncriteriaportal.org/files/epfiles/[ST]%20A00-STP-E01-40.pdf">https://commoncriteriaportal.org/files/epfiles/[ST]%20A00-STP-E01-40.pdf</a> (visited on 2024-06-22).&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>進 日下部, 昌幸 高田, and 将央 佐々木. データ記憶装置およびデータ記憶方法. February 2008. URL: <a href="https://patents.google.com/patent/JP4051510B2/ja">https://patents.google.com/patent/JP4051510B2/ja</a> (visited on 2024-06-23).&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Masahiro Sueyoshi and 正弘 末吉. マルチプロセッサ・システム及びマルチプロセッサ・システムにおけるデータ通信制御方法. August 2002. URL: <a href="https://patents.google.com/patent/JP2002215480A/ja">https://patents.google.com/patent/JP2002215480A/ja</a> (visited on 2024-07-03).&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>佳久 高山 and 進 日下部. 通信システム、通信装置および通信方法、並びにプログラム. May 2008. URL: <a href="https://patents.google.com/patent/JP4092692B2/ja">https://patents.google.com/patent/JP4092692B2/ja</a> (visited on 2024-07-03).&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Sony Corporation. Security Target RC-SA20, RC-SA21 and RC-SA24 Series. Technical Report SA2-STP-E01-02, Nederlands Schema voor Certificatie op het gebied van IT-Beveiliging, June 2020. URL: <a href="https://www.tuv-nederland.nl/assets/files/cerfiticaten/2020/06/nscib-cc-214607-st.pdf">https://www.tuv-nederland.nl/assets/files/cerfiticaten/2020/06/nscib-cc-214607-st.pdf</a> (visited on 2024-06-22).&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../javascript/katex.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
