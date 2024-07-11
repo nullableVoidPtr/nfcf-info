@@ -165,8 +165,9 @@ Unlisted IC module.
 	* RC-S890
 * 576B EEPROM
 
-### Dual interface (32KB)[@sonyRCS952Datasheet2005]
+### Dual Interface (32KB)[@sonyRCS952Datasheet2005]
 IC with physical contacts, potentially for credit/debit cards like Rakuten Edy. Supports both DES and AES encryption, JavaCard applets, ISO/IEC 14443 (NFC-A) and ISO/IEC 7816 (APDU).
+
 * Model name: RC-S952
 * IC code: `08`[@sonyFeliCaTechnicalProductsList]
 * Known PICCs:
@@ -177,8 +178,9 @@ IC with physical contacts, potentially for credit/debit cards like Rakuten Edy. 
 * 32KB EEPROM
 * Hardware core: Infineon
 
-### Dual interface (16KB)[@sonyRCS952Datasheet2005]
+### Dual Interface (16KB)[@sonyRCS952Datasheet2005]
 IC with physical contacts, potentially for credit/debit cards like Rakuten Edy. Supports both DES and AES encryption, JavaCard applets, ISO/IEC 14443 (NFC-A) and ISO/IEC 7816 (APDU).
+
 * Model name: RC-S953
 * IC code: `09`[@sonyFeliCaTechnicalProductsList]
 * 16KB EEPROM
@@ -187,6 +189,7 @@ IC with physical contacts, potentially for credit/debit cards like Rakuten Edy. 
 ### CJRC-compliant[@sonyRCS954Datasheet2009]
 Unlisted IC with physical contacts, potentially for credit/debit cards with additional transport card functionality, such as JR East's View Card with Suica. Model number (ending in 4) indicates compliance with CJRC IC Card standard.
 Supports both DES and AES encryption, JavaCard applets, ISO/IEC 14443 (NFC-A) and ISO/IEC 7816 (APDU).
+
 * Known model names:
 	* RC-S954
 	* RC-S957/2[@sonyRCS957SecurityTarget2009]
@@ -334,6 +337,7 @@ Unlisted IC, likely a precursor to SD2 potentially for transport cards. Model nu
 Released in 2021.
 
 Introduced:
+
 * Extended Overlap Services
 * Value Limited Purse Services
 * Integrated FeliCa Lite-S
@@ -460,10 +464,11 @@ A JavaCard applet seperately developed and licensed by FeliCa Networks Inc., a s
 * Known PICCs: N/A
 
 Within the Mobile FeliCa Client Android application, there are references to two implementation types:
+
 * `FelicaSe` (Secure Element?)
 * `FelicaGp` (GlobalPlatform)
 
-Special thanks to[@eggman](https://qiita.com/eggman/items/27d988fe5c0be2c38a33) on Qiita for gathering data on `FelicaSe` chips.
+Special thanks to [@eggman](https://qiita.com/eggman/items/27d988fe5c0be2c38a33) on Qiita for gathering data on `FelicaSe` chips.
 
 ### Version 1.0[@sonyMobileFeliCa10SecurityTarget2006]
 * IC type: `06`-`07`[@sonyFeliCaTechnicalProductsList]
