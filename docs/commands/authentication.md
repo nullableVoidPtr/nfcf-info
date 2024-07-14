@@ -1,11 +1,14 @@
----
-title: Authentication
----
+## Authentication Start (DES)[@sonyFeliCaSDManual2024;@sonyFeliCaMutualAuthenticationPatent2008;@rrgProxmark3FeliCa2024]
 
-# Authentication Start (DES)[@sonyFeliCaSDManual2024;@sonyFeliCaMutualAuthentication2008;@rrgProxmark3FeliCa2024]
-> Official name: Authentication1
+!!! info "Official Name"
+
+    Authentication1
 
 Initiate mutual authentication with PICC
+
+| Current Mode    | Any |
+|-----------------|-----|
+| Mode Transition | 1   |
 
 === "Command"
 
@@ -28,10 +31,17 @@ Initiate mutual authentication with PICC
 	| Challenge Response A | 8    | $\text{3DESEnc}_{K_a}(R_a)$ |
 	| Random Challenge B   | 8    | $\text{3DESEnc}_{K_a}(R_b)$ |
 
-# Authentication Finish (DES)[@sonyFeliCaSDManual2024;@sonyFeliCaMutualAuthentication2008;@rrgProxmark3FeliCa2024]
-> Official name: Authentication2
+## Authentication Finish (DES)[@sonyFeliCaSDManual2024;@sonyFeliCaMutualAuthenticationPatent2008;@rrgProxmark3FeliCa2024]
+
+!!! info "Official Name"
+
+    Authentication2
 
 Finalise mutual authentication with PICC
+
+| Current Mode    | 1 |
+|-----------------|---|
+| Mode Transition | 2 |
 
 === "Command"
 
@@ -50,10 +60,21 @@ Finalise mutual authentication with PICC
 	| IDi (Issue ID?)     | 8    |                |
 	| PMi (Parameter ID?) | 8    |                |
 
-# Authentication Start (AES)[@sonyFeliCaSDManual2024;@onakasuitaCommands]
-> Official name: Authentication1 v2
+## Authentication Start (AES)[@sonyFeliCaSDManual2024;@onakasuitaCommands]
 
-Initiate mutual authentication with PICC
+!!! info "Official Name"
+
+    Authentication1 v2
+
+!!! warning "Unconfirmed"
+
+	The field format for this command is unknown.
+
+Initiate mutual authentication in AES with PICC
+
+| Current Mode    | Any |
+|-----------------|-----|
+| Mode Transition | 1   |
 
 === "Command"
 
@@ -71,10 +92,21 @@ Initiate mutual authentication with PICC
 	| IDm           | 8    |      |
 	| ??            | ??   |      |
 
-# Authentication Finish (AES)[@sonyFeliCaSDManual2024;@onakasuitaCommands]
-> Official name: Authentication2 v2
+## Authentication Finish (AES)[@sonyFeliCaSDManual2024;@onakasuitaCommands]
 
-Finalise mutual authentication with PICC
+!!! info "Official Name"
+
+    Authentication2 v2
+
+!!! warning "Unconfirmed"
+
+	The field format for this command is unknown.
+
+Finalise mutual authentication in AES with PICC
+
+| Current Mode    | 1 |
+|-----------------|---|
+| Mode Transition | 2 |
 
 === "Command"
 

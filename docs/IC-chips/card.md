@@ -153,7 +153,7 @@ Unlisted IC module.
 	* RC-S864
 		* CJRC-compliant?
 	* RC-S891[@sonyRCS890Datasheet2009]
-* Hardware core: Sony CXD9559
+* Hardware core: Sony CXD9559[@sonyRCS860SecurityTarget2002]
 	* 8-bit RISC CPU
 	* Potentially Fujitsu F^2^MC-8FX or Panasonic AM core
 * 4KB EEPROM
@@ -171,8 +171,8 @@ IC with physical contacts, potentially for credit/debit cards like Rakuten Edy. 
 * Model name: RC-S952
 * IC code: `08`[@sonyFeliCaTechnicalProductsList]
 * Known PICCs:
-	* RC-S952/3MV
-		[@sonyRCS890Datasheet2009]* GlobalPlatform 2.0.1
+	* RC-S952/3MV[@sonyRCS890Datasheet2009]
+		* GlobalPlatform 2.0.1
 		* JavaCard OS 2.1.1
 		* VSDC 2.4.1
 * 32KB EEPROM
@@ -504,6 +504,7 @@ Special thanks to [@eggman](https://qiita.com/eggman/items/27d988fe5c0be2c38a33)
 It appears that Suica has unique functionality on Mobile FeliCa devices, though maybe only on Apple devices, as seen by the different IC type observed in [this screenshot](https://qiita.com/treastrain/items/e8dc5084a663f09ff469#apple-pay-%E3%81%AE-suica-%E3%81%8C%E6%8C%81%E3%81%A4-felica-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%B3%E3%83%BC%E3%83%89).
 
 Also observed on Suica from iPhone 12 Pro, which should have Mobile FeliCa applets.
+
 * IC type: `16`
 
 ### Version 4.0

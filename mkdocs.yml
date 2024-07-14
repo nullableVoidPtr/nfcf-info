@@ -29,6 +29,7 @@ plugins:
   - bibtex:
       bib_file: "refs.bib"
 markdown_extensions:
+  - admonition
   - footnotes
   - pymdownx.superfences:
       custom_fences:

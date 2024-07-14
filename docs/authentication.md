@@ -18,7 +18,7 @@ sequenceDiagram
 #### Group Service Key & User Service Key
 > TODO: actually confirm definition of Group Service Key and User Service Key
 
-Mentioned in Security Target documents[@sonyRCSA00SecurityTarget2012] and referred to as the "Area Intermediate Key" and "Service Intermediate Key" respectively in patent filings[@sonyFeliCaMutualAuthentication2008]. This keypair is used as access keys and as intermediates in diversified key generation when authenticating to a FeliCa IC.
+Mentioned in Security Target documents[@sonyRCSA00SecurityTarget2012] and referred to as the "Area Intermediate Key" and "Service Intermediate Key" respectively in patent filings[@sonyFeliCaMutualAuthenticationPatent2008]. This keypair is used as access keys and as intermediates in diversified key generation when authenticating to a FeliCa IC.
 
 A keypair is used in conjunction with a fixed set of area codes (group service) and service codes (user service) respectively.
 
@@ -30,7 +30,7 @@ Upon the creation of a GSK, the USK can be created. The USK is composed of the G
 
 Similar to GSKs, USKs can be appended to, which is useful if the owner of a service wants to provide authenticated capabilities on their service to other users. However, the appended service(s) must be belong to one of the areas specified in its corresponding GSK.
 
-These keys are a precursor to the 3DES keys used in mutual authentication[@sonyFeliCaMutualAuthentication2008]:
+These keys are a precursor to the 3DES keys used in mutual authentication[@sonyFeliCaMutualAuthenticationPatent2008]:
 
 $$
 \begin{aligned}
@@ -41,7 +41,7 @@ K_a  &= K_{bc}||\text{DESEnc}_{K_{ac}}(K_{bc})
 \end{aligned}
 $$
 
-Following mutual authentication, the reader-generated R~a~ is the initial transaction ID, whereas the card-generated R~b~ is the shared DES transaction key[@sonyEncryptedTransportPatent2002;@sonyProtocolNegotiation2008].
+Following mutual authentication, the reader-generated R~a~ is the initial transaction ID, whereas the card-generated R~b~ is the shared DES transaction key[@sonyEncryptedTransportPatent2002;@sonyProtocolNegotiationPatent2008].
 
 ## AES
 ### Group Key
@@ -50,3 +50,12 @@ Of unknown structure; mentioned in several public Security Target documents, and
 It is unknown if and how access control is implemented across managers/issuers, and whether it is constructed similar to GSKs and USKs.
 
 A Group Key may be a merger of both GSK and USK, into one key and corresponding list of areas and services.
+
+## PIN code[@sonyFeliCaPINCodePatent2011]
+
+> Deprecated?
+
+Mentioned in patents but not public documentation.
+A separate service (*not* an overlay service) that doesn't handle data, but reads in PIN access attempts such that the user can write input attempts to the PIN code service(?) and then be authenticated to the corresponding service/area.
+
+A PIN service code is the corresponding area/service code (*not* number(?)) with the 5th bit (0x20) set.
